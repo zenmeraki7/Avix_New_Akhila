@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    /* Core brand colors - Financial Blue & Gold */
+    /* Core brand colors - AVIX Purple & Violet */
     --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --foreground: 262 100% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 262 100% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 262 100% 15%;
 
-    /* Primary - Professional Navy Blue */
-    --primary: 215 50% 20%;
+    /* Primary - AVIX Dark Purple */
+    --primary: 262 100% 15%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 215 50% 25%;
+    --primary-hover: 262 100% 20%;
 
-    /* Secondary - Premium Gold */
-    --secondary: 45 85% 55%;
-    --secondary-foreground: 215 25% 15%;
-    --secondary-hover: 45 85% 60%;
+    /* Secondary - AVIX Royal Blue-Purple */
+    --secondary: 267 100% 26%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-hover: 267 100% 30%;
 
     /* Muted - Light Background */
-    --muted: 210 15% 96%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 260 15% 96%;
+    --muted-foreground: 262 15% 45%;
 
-    /* Accent - Trust Blue */
-    --accent: 210 100% 50%;
+    /* Accent - AVIX Violet */
+    --accent: 289 69% 37%;
     --accent-foreground: 0 0% 98%;
-    --accent-hover: 210 100% 55%;
+    --accent-hover: 289 69% 42%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 15% 90%;
-    --input: 210 15% 95%;
-    --ring: 215 50% 20%;
+    --border: 260 15% 90%;
+    --input: 260 15% 95%;
+    --ring: 262 100% 15%;
 
-    /* Financial gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 50% 20%), hsl(210 100% 50%));
-    --gradient-secondary: linear-gradient(135deg, hsl(45 85% 55%), hsl(35 75% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(215 50% 20%) 0%, hsl(210 100% 50%) 50%, hsl(45 85% 55%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
+    /* AVIX Brand gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 100% 15%), hsl(267 100% 26%));
+    --gradient-secondary: linear-gradient(135deg, hsl(267 100% 26%), hsl(289 69% 37%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 100% 15%) 0%, hsl(267 100% 26%) 50%, hsl(289 69% 37%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(260 15% 98%) 100%);
 
-    /* Professional shadows */
-    --shadow-card: 0 4px 20px -2px hsl(215 25% 15% / 0.08);
-    --shadow-hero: 0 20px 40px -12px hsl(215 50% 20% / 0.25);
-    --shadow-button: 0 4px 12px -2px hsl(215 50% 20% / 0.2);
+    /* AVIX shadows */
+    --shadow-card: 0 4px 20px -2px hsl(262 100% 15% / 0.08);
+    --shadow-hero: 0 20px 40px -12px hsl(262 100% 15% / 0.25);
+    --shadow-button: 0 4px 12px -2px hsl(262 100% 15% / 0.2);
 
     /* Smooth animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
