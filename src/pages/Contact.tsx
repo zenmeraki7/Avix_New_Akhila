@@ -45,19 +45,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 9876543210", "+91 9876543211"],
+      details: ["+91 99468 41656"],
       description: "Available Mon-Sat, 9 AM - 7 PM"
     },
     {
       icon: Mail,
       title: "Email Us", 
-      details: ["info@avixfinancial.com", "support@avixfinancial.com"],
+      details: ["info@avixfinancial.com"],
       description: "We'll respond within 24 hours"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["AVIX Financial Services", "Mumbai, Maharashtra 400001"],
+      details: ["5th floor, Chowalloor Tower", "West Fort, Civil Lanes Road", "Thrissur - 680004"],
       description: "By appointment only"
     },
     {
@@ -277,7 +277,7 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center gap-3 text-xl font-semibold">
               <Phone className="w-6 h-6" />
-              <span>+91 9876543210</span>
+              <span>+91 99468 41656</span>
             </div>
             <div className="hidden sm:block text-primary-foreground/60">|</div>
             <div className="flex items-center gap-3 text-xl font-semibold">
