@@ -25,9 +25,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    service: '',
-    message: ''
+    phone: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -36,7 +34,7 @@ const Contact = () => {
       title: "Form Submitted Successfully!",
       description: "Our team will contact you within 24 hours.",
     });
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+    setFormData({ name: '', email: '', phone: '' });
   };
 
   const handleChange = (field: string, value: string) => {
@@ -125,7 +123,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
                       <Input
@@ -136,6 +134,7 @@ const Contact = () => {
                         required
                       />
                     </div>
+
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number *</Label>
                       <Input
@@ -147,50 +146,22 @@ const Contact = () => {
                         required
                       />
                     </div>
-                  </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="Enter your email address"
-                      value={formData.email}
-                      onChange={(e) => handleChange('email', e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="service">Service Required</Label>
-                    <Select value={formData.service} onValueChange={(value) => handleChange('service', value)}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {services.map((service) => (
-                          <SelectItem key={service} value={service}>
-                            {service}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us about your requirements..."
-                      rows={4}
-                      value={formData.message}
-                      onChange={(e) => handleChange('message', e.target.value)}
-                    />
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email Address</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="Enter your email address (optional)"
+                        value={formData.email}
+                        onChange={(e) => handleChange('email', e.target.value)}
+                      />
+                    </div>
                   </div>
 
                   <Button type="submit" className="w-full" size="lg">
                     <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    Submit
                   </Button>
                 </form>
               </CardContent>
