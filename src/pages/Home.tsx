@@ -90,10 +90,7 @@ const Home = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Your Financial
-            <span className="block bg-gradient-secondary bg-clip-text text-transparent">
-              Success Partner
-            </span>
+          Where Financial Clarity Begins
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
             From loans to investments, insurance to tax planning - we provide comprehensive 
