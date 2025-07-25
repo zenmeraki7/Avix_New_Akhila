@@ -1,6 +1,7 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ServiceCard from '@/components/ServiceCard';
+import EMICalculator from '@/components/emi-calculator/EMICalculator';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -252,10 +253,10 @@ const Services = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5" />
-                    <span>+91 9876543210</span>
-                  </div>
+                   <div className="flex items-center gap-3">
+                     <Phone className="w-5 h-5" />
+                     <span>+91 99468 41656</span>
+                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-5 h-5 text-center">📧</span>
                     <span>info@avixfinancial.com</span>
@@ -275,6 +276,19 @@ const Services = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* EMI Calculator Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Calculate Your EMI</h2>
+            <p className="text-xl text-muted-foreground">
+              Get instant EMI calculations for your loan requirements
+            </p>
+          </div>
+          <EMICalculator />
         </div>
       </section>
 
