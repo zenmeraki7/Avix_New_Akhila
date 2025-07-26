@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /* AVIX Financial Services Design System - Modern Finance Theme */
 
 @layer base {
@@ -123,4 +125,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+*{
+  font-family: 'Times New Roman', sans-serif;
 }

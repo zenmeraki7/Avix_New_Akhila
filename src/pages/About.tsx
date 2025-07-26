@@ -73,22 +73,22 @@ const About = () => {
       <section className="py-20 bg-gradient-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">About AVIX Financial Services</h1>
+            <h1 className="text-5xl font-bold mb-6">About AVIX Financial Solutions</h1>
             <p className="text-xl mb-8 text-primary-foreground/90">
               Empowering financial dreams since 2009. We are your trusted partner 
               in achieving financial success and security.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-secondary mb-2">15+</div>
+                <div className="text-4xl font-bold text-secondary mb-2">8+</div>
                 <div className="text-primary-foreground/80">Years of Excellence</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-secondary mb-2">50K+</div>
+                <div className="text-4xl font-bold text-secondary mb-2">10K+</div>
                 <div className="text-primary-foreground/80">Happy Customers</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-secondary mb-2">₹1000Cr+</div>
+                <div className="text-4xl font-bold text-secondary mb-2">₹100Cr+</div>
                 <div className="text-primary-foreground/80">Loans Disbursed</div>
               </div>
             </div>
@@ -214,7 +214,7 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20">
+      <section className="py-20  ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Why Choose AVIX?</h2>

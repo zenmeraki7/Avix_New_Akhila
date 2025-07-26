@@ -11,8 +11,6 @@ const Header = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Calculator', href: '/calculator' },
-    { name: 'Contact', href: '/contact' },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -27,17 +25,17 @@ const Header = () => {
               <span className="text-primary-foreground font-bold text-lg">A</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              AVIX Financial
+              AVIX 
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-accent ${
+                className={`text-xxl font-medium transition-colors duration-200 hover:text-accent ${
                   isActive(item.href)
                     ? 'text-accent border-b-2 border-accent pb-1'
                     : 'text-foreground'
@@ -49,7 +47,7 @@ const Header = () => {
             <Button variant="accent" size="sm" asChild>
               <Link to="/contact">
                 <Phone className="w-4 h-4" />
-                Get Quote
+                <span className='text-xxl font-medium '>Contact us</span>
               </Link>
             </Button>
           </div>

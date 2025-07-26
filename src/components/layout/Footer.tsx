@@ -28,7 +28,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
                 <span className="text-secondary-foreground font-bold text-lg">A</span>
               </div>
-              <span className="text-2xl font-bold">AVIX Financial Services</span>
+              <span className="text-2xl font-bold">AVIX </span>
             </div>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
               Your trusted partner for all financial solutions. We provide comprehensive 
@@ -41,7 +41,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>info@avixfinancial.com</span>
+                <span>avixfinancialsolutions@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
@@ -105,7 +105,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; 2024 AVIX Financial Services. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>&copy; 2025 AVIX Financial Solutions. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
       </div>
     </footer>

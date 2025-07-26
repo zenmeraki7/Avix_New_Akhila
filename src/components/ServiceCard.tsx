@@ -18,19 +18,19 @@ const ServiceCard = ({ title, description, features, icon: Icon, className }: Se
           <Icon className="w-6 h-6 text-primary-foreground" />
         </div>
         <CardTitle className="text-xl font-semibold text-foreground">{title}</CardTitle>
-        <CardDescription className="text-muted-foreground">{description}</CardDescription>
+        <CardDescription className="text-muted-foreground text-lg">{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <ul className="space-y-2 mb-6">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-center text-sm text-foreground">
+            <li key={index} className="flex items-center text-medium text-foreground">
               <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3" />
               {feature}
             </li>
           ))}
         </ul>
         <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
-          Learn More
+          View More
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
         </Button>
       </CardContent>

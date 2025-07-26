@@ -120,7 +120,7 @@ const Calculator = () => {
               <CardContent className="space-y-6">
                 <div className="space-y-3 text-sm">
                   <p>📞 Call us at: +91 9876543210</p>
-                  <p>📧 Email: info@avixfinancial.com</p>
+                  <p>📧 Email: avixfinancialsolutions@gmail.com</p>
                   <p>🕒 Mon-Sat: 9 AM - 7 PM</p>
                 </div>
                 

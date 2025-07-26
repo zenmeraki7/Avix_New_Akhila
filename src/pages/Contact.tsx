@@ -51,7 +51,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us", 
-      details: ["info@avixfinancial.com"],
+      details: ["avixfinancialsolutions@gmail.com"],
       description: "We'll respond within 24 hours"
     },
     {
@@ -64,7 +64,7 @@ const Contact = () => {
       icon: Clock,
       title: "Business Hours",
       details: ["Monday - Saturday: 9 AM - 7 PM", "Sunday: Closed"],
-      description: "Emergency support available"
+      description: "Customer support available"
     }
   ];
 
@@ -83,7 +83,7 @@ const Contact = () => {
   ];
 
   const benefits = [
-    "Free consultation and financial advice",
+    "consultation and financial advice",
     "Quick response within 24 hours",
     "Personalized solutions for your needs",
     "Transparent processes with no hidden fees",
@@ -115,7 +115,7 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">
                   <MessageCircle className="w-6 h-6 text-accent" />
-                  Get Free Consultation
+                  Get Consultation
                 </CardTitle>
                 <CardDescription>
                   Fill out the form below and our experts will contact you within 24 hours
@@ -165,6 +165,18 @@ const Contact = () => {
                   </Button>
                 </form>
               </CardContent>
+              <div className="p-4 rounded-xl shadow-lg bg-background mt-8 flex justify-center">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.7224383960324!2d76.19832227480111!3d10.52251388961123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7958797076b73%3A0xce4820331dad7cf1!2sZen%20Meraki!5e0!3m2!1sen!2sin!4v1753513950021!5m2!1sen!2sin"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, borderRadius: '0.75rem', minWidth: '250px', maxWidth: '100%' }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Zen Meraki Location"
+                ></iframe>
+              </div>
             </Card>
 
             {/* Contact Information */}
@@ -282,7 +294,7 @@ const Contact = () => {
             <div className="hidden sm:block text-primary-foreground/60">|</div>
             <div className="flex items-center gap-3 text-xl font-semibold">
               <Calendar className="w-6 h-6" />
-              <span>24/7 Emergency Support</span>
+              <span>24/7 Customer Support</span>
             </div>
           </div>
         </div>

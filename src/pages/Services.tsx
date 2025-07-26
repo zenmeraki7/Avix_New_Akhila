@@ -259,12 +259,12 @@ const Services = () => {
                    </div>
                   <div className="flex items-center gap-3">
                     <span className="w-5 h-5 text-center">📧</span>
-                    <span>info@avixfinancial.com</span>
+                    <span>avixfinancialsolutions@gmail.com</span>
                   </div>
                 </div>
                 <div className="pt-4 space-y-3">
                   <Button variant="secondary" className="w-full" asChild>
-                    <Link to="/contact">Get Free Consultation</Link>
+                    <Link to="/contact">Get Consultation</Link>
                   </Button>
                   <Button variant="hero" className="w-full" asChild>
                     <Link to="/calculator">
