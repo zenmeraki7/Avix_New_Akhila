@@ -20,6 +20,34 @@ import {
   CheckCircle
 } from 'lucide-react';
 
+// AVIX Brand Colors
+const avixStyles = `
+  .avix-gradient-primary {
+    background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+  }
+  
+  .avix-gradient-card {
+    background: linear-gradient(145deg, rgba(28, 0, 77, 0.05) 0%, rgba(58, 0, 135, 0.08) 50%, rgba(138, 28, 157, 0.05) 100%);
+    border: 1px solid rgba(138, 28, 157, 0.2);
+  }
+  
+  .avix-accent {
+    color: #8A1C9D;
+  }
+  
+  .avix-primary-hover {
+    background: linear-gradient(135deg, #2D0A5E 0%, #4B1098 50%, #9B2CAE 100%);
+  }
+  
+  .avix-shadow-card {
+    box-shadow: 0 4px 20px rgba(138, 28, 157, 0.15);
+  }
+  
+  .avix-shadow-hero {
+    box-shadow: 0 8px 32px rgba(138, 28, 157, 0.25);
+  }
+`;
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -92,29 +120,31 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-            Ready to start your financial journey? Get in touch with our experts for 
-            personalized advice and solutions tailored to your needs.
-          </p>
-        </div>
-      </section>
+    <>
+      <style>{avixStyles}</style>
+      <div className="min-h-screen bg-background">
+        <Header />
+        
+        {/* Hero Section */}
+        <section className="py-20 avix-gradient-primary text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Ready to start your financial journey? Get in touch with our experts for 
+              personalized advice and solutions tailored to your needs.
+            </p>
+          </div>
+        </section>
 
       {/* Contact Form & Info */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="bg-gradient-card border-0 shadow-card">
+            <Card className="avix-gradient-card border-0 avix-shadow-card">
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">
-                  <MessageCircle className="w-6 h-6 text-accent" />
+                  <MessageCircle className="w-6 h-6 avix-accent" />
                   Get Consultation
                 </CardTitle>
                 <CardDescription>
@@ -159,7 +189,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <Button type="submit" className="w-full" size="lg">
+                  <Button type="submit" className="w-full avix-gradient-primary hover:avix-primary-hover text-white border-0" size="lg">
                     <Send className="w-4 h-4 mr-2" />
                     Submit
                   </Button>
@@ -167,14 +197,14 @@ const Contact = () => {
               </CardContent>
               <div className="p-4 rounded-xl shadow-lg bg-background mt-8 flex justify-center">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.7224383960324!2d76.19832227480111!3d10.52251388961123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7958797076b73%3A0xce4820331dad7cf1!2sZen%20Meraki!5e0!3m2!1sen!2sin!4v1753513950021!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.695582756733!2d76.21031567570314!3d10.523976660075893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ee15ed42d1c5%3A0x4bc7dbae8d9c6f51!2sChowallur%20Towers%2C%20West%20Fort%2C%20Thrissur%2C%20Kerala%20680004!5e0!3m2!1sen!2sin!4v1722854951234!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0, borderRadius: '0.75rem', minWidth: '250px', maxWidth: '100%' }}
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Zen Meraki Location"
+                  title="AVIX Financial Solutions - Chowallur Towers"
                 ></iframe>
               </div>
             </Card>
@@ -190,11 +220,11 @@ const Contact = () => {
 
               <div className="grid gap-6">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="bg-background border shadow-card hover:shadow-hero transition-all duration-300">
+                  <Card key={index} className="bg-background border avix-shadow-card hover:avix-shadow-hero transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                          <info.icon className="w-6 h-6 text-primary-foreground" />
+                        <div className="w-12 h-12 avix-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                          <info.icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-2">{info.title}</h3>
@@ -226,7 +256,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 avix-accent flex-shrink-0 mt-1" />
                 <span className="text-foreground">{benefit}</span>
               </div>
             ))}
@@ -268,7 +298,7 @@ const Contact = () => {
                 answer: "You can track your application status by calling our customer service or through our online portal."
               }
             ].map((faq, index) => (
-              <Card key={index} className="bg-gradient-card border-0 shadow-card">
+              <Card key={index} className="avix-gradient-card border-0 avix-shadow-card">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-3">{faq.question}</h3>
                   <p className="text-muted-foreground text-sm">{faq.answer}</p>
@@ -280,10 +310,10 @@ const Contact = () => {
       </section>
 
       {/* Emergency Contact */}
-      <section className="py-20 bg-gradient-primary text-primary-foreground">
+      <section className="py-20 avix-gradient-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Need Immediate Assistance?</h2>
-          <p className="text-xl mb-8 text-primary-foreground/90">
+          <p className="text-xl mb-8 text-white/90">
             For urgent queries or emergencies, call our helpline
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -291,7 +321,7 @@ const Contact = () => {
               <Phone className="w-6 h-6" />
               <span>+91 99468 41656</span>
             </div>
-            <div className="hidden sm:block text-primary-foreground/60">|</div>
+            <div className="hidden sm:block text-white/60">|</div>
             <div className="flex items-center gap-3 text-xl font-semibold">
               <Calendar className="w-6 h-6" />
               <span>24/7 Customer Support</span>
@@ -300,8 +330,9 @@ const Contact = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

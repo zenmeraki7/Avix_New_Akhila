@@ -39,12 +39,11 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2009", event: "AVIX Financial Services founded" },
-    { year: "2012", event: "Crossed ₹100 Cr in loan disbursals" },
-    { year: "2015", event: "Launched digital platform" },
-    { year: "2018", event: "Expanded to insurance services" },
-    { year: "2020", event: "Introduced investment advisory" },
-    { year: "2024", event: "Serving 50,000+ satisfied customers" }
+    { year: "2017", event: "AVIX Financial Services founded" },
+    { year: "2019", event: "Expanded to insurance services" },
+    { year: "2022", event: "Introduced investment advisory" },
+    { year: "2024", event: "Crossed ₹100 Cr in loan disbursals, Serving 10,000+ satisfied customers " },
+    { year: "2025", event: "Launched digital platform " }
   ];
 
   const team = [
@@ -186,33 +185,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-20 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Our Leadership Team</h2>
-            <p className="text-xl text-muted-foreground">
-              Experienced professionals leading our mission
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="bg-background border-0 shadow-card text-center">
-                <CardContent className="p-8">
-                  <div className="w-24 h-24 bg-gradient-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <Users className="w-12 h-12 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{member.name}</h3>
-                  <p className="text-accent font-medium mb-2">{member.role}</p>
-                  <p className="text-muted-foreground text-sm">{member.experience}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us */}
       <section className="py-20  ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,7 +194,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              "15+ years of proven expertise in financial services",
+              "8+ years of proven expertise in financial services",
               "Transparent processes with no hidden charges",
               "Quick approvals and minimal documentation",
               "Competitive interest rates and flexible terms",

@@ -7,6 +7,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import aditya from '../assets/aditya.webp';
+import aig from '../assets/aig.webp';
+import icici from '../assets/icici.webp';
+import lombard from '../assets/lombard.webp';
+import niva from '../assets/niva.webp';
+import care from '../assets/care.webp';
+import cigna from '../assets/cigna.webp';
+import ergo from '../assets/ergo.webp';
+import star from '../assets/star.webp';
 import poonawalla from "../assets/poonwalla.jpeg";
 import smfg from "../assets/smfg.jpeg";
 import southIndian from "../assets/southIndian.jpeg";
@@ -29,6 +38,7 @@ import LTFinance from "../assets/LTFinance.jpeg";
 import muthoot from "../assets/muthoot.jpeg";
 import piramal from "../assets/piramal.jpeg";
 import yesBank from "../assets/yesBank.jpeg";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import {
@@ -50,119 +60,139 @@ import {
 } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import heroImage from "@/assets/hero-financial.jpg";
-import servicesImage from "@/assets/services-overview.jpg";
+import familyImage from '../assets/family.png';
 import bg from "@/assets/bg.png";
 import CountUp from "react-countup";
 import { memo, useMemo } from "react";
 
-// Memoized Modern Service Card Component
+// AVIX Brand Colors
+const avixStyles = `
+  .avix-gradient-primary {
+    background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+  }
+  
+  .avix-gradient-card {
+    background: linear-gradient(145deg, rgba(28, 0, 77, 0.02) 0%, rgba(58, 0, 135, 0.04) 50%, rgba(138, 28, 157, 0.02) 100%);
+    border: 1px solid rgba(138, 28, 157, 0.1);
+  }
+  
+  .avix-accent {
+    color: #8A1C9D;
+  }
+  
+  .avix-icon-bg {
+    background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+  }
+  
+  .avix-shadow-card {
+    box-shadow: 0 4px 20px rgba(138, 28, 157, 0.08);
+  }
+  
+  .avix-shadow-hero {
+    box-shadow: 0 8px 32px rgba(138, 28, 157, 0.25);
+  }
+  
+  .avix-button-secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1C004D;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .avix-button-secondary:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #1C004D;
+  }
+  
+  .avix-premium-badge {
+    background: linear-gradient(135deg, #8A1C9D 0%, #3A0087 100%);
+    color: white;
+  }
+  
+  .avix-popular-badge {
+    background: linear-gradient(135deg, #8A1C9D 0%, #FF6B35 100%);
+    color: white;
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-in-up {
+    animation: slideInUp 0.8s ease-out forwards;
+  }
+`;
+
+// Memoized Modern Service Card Component with AVIX Theme
 const ModernServiceCard = memo(({ service, index }) => {
   const isPopular = service.popular;
 
   return (
-    <div
-      className={`group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border overflow-hidden ${
-        isPopular
-          ? "border-accent/30 ring-2 ring-accent/20"
-          : "border-gray-100 hover:border-accent/30"
+    <Card
+      className={`group avix-gradient-card avix-shadow-card hover:avix-shadow-hero transition-all duration-500 transform hover:-translate-y-3 animate-slide-in-up overflow-hidden ${
+        isPopular ? "ring-2 ring-purple-200/50" : ""
       }`}
-      style={{
-        animationDelay: `${index * 150}ms`,
-        animation: "slideInUp 0.8s ease-out forwards",
-      }}
+      style={{ animationDelay: `${index * 150}ms` }}
     >
       {/* Popular Badge */}
       {isPopular && (
-        <div className="absolute top-2 left-4 bg-gradient-to-r from-accent to-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center z-10 ">
-          <Zap className="w-3 h-3 mr-1 " />
+        <div className="absolute top-4 left-4 avix-popular-badge px-4 py-1 rounded-full text-sm font-semibold flex items-center z-10">
+          <Zap className="w-3 h-3 mr-1" />
           Most Popular
         </div>
       )}
 
-      {/* Background Gradient */}
-      <div
-        className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-          isPopular
-            ? "bg-gradient-to-br from-accent/5 to-orange-50"
-            : "bg-gradient-to-br from-primary/5 to-blue-50"
-        }`}
-      />
-
-      <div className="relative z-10">
+      <CardHeader className="relative pt-8">
         <div className="flex items-center justify-between mb-6">
-          <div
-            className={`relative p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300 ${
-              isPopular
-                ? "bg-gradient-to-br from-accent/10 to-orange-100 group-hover:from-accent/20 group-hover:to-orange-200"
-                : "bg-gradient-to-br from-primary/10 to-blue-100 group-hover:from-primary/20 group-hover:to-blue-200"
-            }`}
-          >
-            <service.icon
-              className={`w-8 h-8 ${
-                isPopular ? "text-accent" : "text-primary"
-              }`}
-            />
+          <div className="relative w-16 h-16 avix-icon-bg rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <service.icon className="w-8 h-8 text-white" />
             {service.fastTrack && (
               <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
                 <Clock className="w-3 h-3 text-white" />
               </div>
             )}
           </div>
-          <div
-            className={`text-sm font-bold px-3 py-1 rounded-full ${
-              isPopular
-                ? "text-accent bg-accent/10"
-                : "text-primary bg-primary/10"
-            }`}
-          >
+          <div className="text-sm font-bold avix-accent bg-purple-50 px-3 py-1 rounded-full">
             {service.badge}
           </div>
         </div>
 
-        <h3
-          className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
-            isPopular
-              ? "text-gray-900 group-hover:text-accent"
-              : "text-gray-900 group-hover:text-primary"
-          }`}
-        >
+        <CardTitle className="text-2xl group-hover:text-purple-600 transition-colors duration-300">
           {service.title}
-        </h3>
-
-        <p className="text-gray-600 mb-6 leading-relaxed line-clamp-3">
+        </CardTitle>
+        <CardDescription className="text-base leading-relaxed text-foreground/80">
           {service.description}
-        </p>
+        </CardDescription>
+      </CardHeader>
 
+      <CardContent>
         <div className="space-y-3 mb-8">
-          {service.features.slice(0, 3).map((feature, idx) => (
-            <div key={idx} className="flex items-start text-sm text-gray-700">
-              <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-              <span className="leading-relaxed">{feature}</span>
+          {service.features.slice(0, 4).map((feature, idx) => (
+            <div key={idx} className="flex items-start text-sm">
+              <CheckCircle className="w-4 h-4 avix-accent mr-3 flex-shrink-0 mt-0.5" />
+              <span className="leading-relaxed text-foreground/90">{feature}</span>
             </div>
           ))}
-          {service.features.length > 3 && (
-            <div className="text-sm text-gray-500 italic">
-              +{service.features.length - 3} more benefits
-            </div>
-          )}
         </div>
 
-        <div className="flex items-center justify-between pt-6 border-t border-gray-100">
-          <div className="text-sm text-gray-500">
+        <div className="flex items-center justify-between pt-6 border-t border-border">
+          <div className="text-sm text-muted-foreground">
             Starting from:{" "}
-            <span className="font-semibold text-gray-900">
+            <span className="font-semibold text-foreground">
               {service.startingRate}
             </span>
           </div>
           <Button
-            variant="ghost"
+            variant="outline"
             size="sm"
             asChild
-            className={`group/btn font-semibold transition-all duration-200 ${
-              isPopular
-                ? "text-accent hover:text-accent hover:bg-accent/10"
-                : "text-primary hover:text-primary hover:bg-primary/10"
-            }`}
+            className="avix-accent border-current hover:bg-current hover:text-white group/btn"
           >
             <Link to={service.link}>
               Explore
@@ -170,8 +200,8 @@ const ModernServiceCard = memo(({ service, index }) => {
             </Link>
           </Button>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 });
 
@@ -180,12 +210,12 @@ const Home = () => {
   const services = useMemo(
     () => [
       {
-        title: "Quick Loans",
+        title: "Loans",
         description:
           "Apply online for fast, hassle‑free personal, business, car, and loan‑takeover financing. Enjoy competitive interest rates, flexible repayment tenures, and instant approval with minimal documentation to meet all your funding needs.",
         features: [
-          "Instant personal loans with minimal paperwork",
-          "Business loans for working capital and growth",
+          "Fast personal loans with minimal paperwork",
+          "Unsecured Business loans for working capital and growth",
           "Car loans up to 100% financing at attractive rates",
           "Seamless loan takeover for lower EMIs and better terms",
           "24-hour approval process",
@@ -211,8 +241,8 @@ const Home = () => {
           "Regular performance tracking",
         ],
         icon: TrendingUp,
-        link: "/Investment",
-        badge: "Upto 15% CAGR",
+        link: "/investment",
+        badge: "Up to 15% CAGR",
         startingRate: "₹500/month",
       },
       {
@@ -228,8 +258,8 @@ const Home = () => {
           "24/7 claims assistance support",
         ],
         icon: Shield,
-        link: "/Insurance",
-        badge: "Upto ₹1 Cr",
+        link: "/insurence",
+        badge: "Up to ₹1 Cr",
         startingRate: "₹999/year",
         popular: true,
       },
@@ -294,16 +324,16 @@ const Home = () => {
 
   // Service section with enhanced design
   const ServicesSection = memo(() => (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30">
+    <section className="py-20 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
+          <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4">
             <Target className="w-4 h-4 mr-2" />
             Comprehensive Financial Solutions
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            <span className="avix-accent">
               Financial Services
             </span>
           </h2>
@@ -321,7 +351,7 @@ const Home = () => {
 
         {/* Additional CTA */}
         <div className="text-center">
-          <Button variant="outline" size="lg" asChild className="group">
+          <Button variant="outline" size="lg" asChild className="group avix-accent border-current hover:bg-current hover:text-white">
             <Link to="/services">
               View All Services
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -329,35 +359,15 @@ const Home = () => {
           </Button>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes slideInUp {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .line-clamp-3 {
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
     </section>
   ));
 
   return (
     <>
+      <style>{avixStyles}</style>
       <div className="min-h-screen bg-background">
         <Header />
 
-        {/* Hero Section */}
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div
@@ -367,25 +377,25 @@ const Home = () => {
               backgroundPosition: "center 20%", // shifts image lower
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
+            <div className="absolute inset-0 avix-gradient-primary opacity-85" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Where Financial Clarity Begins
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
               From loans to investments, insurance to tax planning - we provide
               comprehensive financial solutions tailored to your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" asChild>
+              <Button className="bg-white/20 hover:bg-white/30 text-white border-white/30" size="lg" asChild>
                 <Link to="/services">
                   Our Services
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
-              <Button variant="secondary" size="lg" asChild>
+              <Button className="avix-button-secondary hover:avix-button-secondary" size="lg" asChild>
                 <Link to="/calculator">
                   <Calculator className="w-5 h-5 mr-2" />
                   EMI Calculator
@@ -401,7 +411,7 @@ const Home = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                  <div className="text-4xl md:text-5xl font-bold avix-accent mb-2">
                     <CountUp
                       end={stat.number}
                       duration={2}
@@ -424,11 +434,11 @@ const Home = () => {
         <ServicesSection />
 
         {/* Why Choose Us Section */}
-        <section className="py-20 min-h-[600px] bg-gradient-primary text-primary-foreground">
+        <section className="py-20 min-h-[600px] avix-gradient-primary text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="md:text-left text-center">
-                <h3 className="text-4xl font-bold text-primary-foreground/90 mb-8">
+                <h3 className="text-4xl font-bold text-white mb-8">
                   Why Choose AVIX ?
                 </h3>
                 <div className="space-y-5 text-xl">
@@ -443,22 +453,22 @@ const Home = () => {
                       key={index}
                       className="flex items-center gap-3 md:justify-start justify-center"
                     >
-                      <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
-                      <span className="text-lg text-primary-foreground/90">
+                      <CheckCircle className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                      <span className="text-lg text-white/90">
                         {feature}
                       </span>
                     </div>
                   ))}
                 </div>
-                <Button variant="accent" size="lg" className="mt-10" asChild>
-                  <Link to="/">Learn More About Us</Link>
+                <Button className="avix-button-secondary hover:avix-button-secondary mt-10" size="lg" asChild>
+                  <Link to="/about">Learn More About Us</Link>
                 </Button>
               </div>
               <div className="relative flex justify-center">
                 <img
-                  src={servicesImage}
+                  src={familyImage}
                   alt="Financial Services Overview"
-                  className="rounded-lg shadow-hero w-full h-auto max-w-xl"
+                  className="rounded-lg avix-shadow-hero w-full h-auto max-w-xl"
                 />
               </div>
             </div>
@@ -550,16 +560,16 @@ const Home = () => {
           </div>
         </section>
 
-        {/* insurence partners */}
+        {/* Insurance partners */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-4">
-                Our Insurence Partners
+                Our Insurance Partners
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                We collaborate with leading financial institutions to provide
-                you the best services
+                We collaborate with leading insurance companies to provide
+                you the best coverage options
               </p>
             </div>
 
@@ -570,66 +580,38 @@ const Home = () => {
               className="py-5"
             >
               <div className="flex gap-6">
-                {/* Partner logos with improved styling */}
                 {[
-                  { src: poonawalla, alt: "Poonawalla" },
-                  { src: smfg, alt: "SMFG" },
-                  { src: southIndian, alt: "South Indian Bank" },
-                  { src: shriram, alt: "Shriram" },
-                  { src: TATA, alt: "TATA" },
-                  { src: Birla, alt: "Birla" },
-                  { src: Axis, alt: "Axis" },
-                  { src: Axisfinance, alt: "Axis Finance" },
-                  { src: Bajaj, alt: "Bajaj" },
-                  { src: chola, alt: "Chola" },
-                  { src: finnable, alt: "Finnable" },
-                  { src: HDFC, alt: "HDFC" },
-                  { src: IDBI, alt: "IDBI" },
-                  { src: IDFC, alt: "IDFC" },
-                  { src: inCred, alt: "InCred" },
-                  { src: IndusInd, alt: "IndusInd" },
-                  { src: kotak, alt: "Kotak" },
-                  { src: LTFinance, alt: "L&T Finance" },
-                  { src: muthoot, alt: "Muthoot" },
-                  { src: piramal, alt: "Piramal" },
-                  { src: yesBank, alt: "Yes Bank" },
-                ]
-                  .concat([
-                    // Duplicate for seamless scroll
-                    { src: poonawalla, alt: "Poonawalla" },
-                    { src: smfg, alt: "SMFG" },
-                    { src: southIndian, alt: "South Indian Bank" },
-                    { src: shriram, alt: "Shriram" },
-                    { src: TATA, alt: "TATA" },
-                    { src: Birla, alt: "Birla" },
-                    { src: Axis, alt: "Axis" },
-                    { src: Axisfinance, alt: "Axis Finance" },
-                    { src: Bajaj, alt: "Bajaj" },
-                    { src: chola, alt: "Chola" },
-                    { src: finnable, alt: "Finnable" },
-                    { src: HDFC, alt: "HDFC" },
-                    { src: IDBI, alt: "IDBI" },
-                    { src: IDFC, alt: "IDFC" },
-                    { src: inCred, alt: "InCred" },
-                    { src: IndusInd, alt: "IndusInd" },
-                    { src: kotak, alt: "Kotak" },
-                    { src: LTFinance, alt: "L&T Finance" },
-                    { src: muthoot, alt: "Muthoot" },
-                    { src: piramal, alt: "Piramal" },
-                    { src: yesBank, alt: "Yes Bank" },
-                  ])
-                  .map((partner, index) => (
-                    <div
-                      key={index}
-                      className="w-36 h-24 flex items-center justify-center bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out p-4 mx-3"
-                    >
-                      <img
-                        src={partner.src}
-                        alt={partner.alt}
-                        className="h-12 object-contain"
-                      />
-                    </div>
-                  ))}
+                  { src: aditya, alt: "Aditya Birla Insurance" },
+                  { src: aig,    alt: "AIG" },
+                  { src: icici,  alt: "ICICI Lombard" },
+                  { src: lombard,alt: "Lombard" },
+                  { src: niva,   alt: "Niva Bupa" },
+                  { src: care,   alt: "Care Health Insurance" },
+                  { src: cigna,  alt: "Cigna TTK" },
+                  { src: ergo,   alt: "Ergo Insurance" },
+                  { src: star,   alt: "Star Health" },
+                  // duplicate for seamless loop
+                  { src: aditya, alt: "Aditya Birla Insurance" },
+                  { src: aig,    alt: "AIG" },
+                  { src: icici,  alt: "ICICI Lombard" },
+                  { src: lombard,alt: "Lombard" },
+                  { src: niva,   alt: "Niva Bupa" },
+                  { src: care,   alt: "Care Health Insurance" },
+                  { src: cigna,  alt: "Cigna TTK" },
+                  { src: ergo,   alt: "Ergo Insurance" },
+                  { src: star,   alt: "Star Health" },
+                ].map((partner, index) => (
+                  <div
+                    key={index}
+                    className="w-36 h-24 flex items-center justify-center bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out p-4 mx-3"
+                  >
+                    <img
+                      src={partner.src}
+                      alt={partner.alt}
+                      className="h-12 object-contain"
+                    />
+                  </div>
+                ))}
               </div>
             </Marquee>
           </div>
@@ -651,14 +633,14 @@ const Home = () => {
               {testimonials.map((testimonial, index) => (
                 <Card
                   key={index}
-                  className="bg-background border-0 shadow-card"
+                  className="avix-gradient-card border-0 avix-shadow-card"
                 >
                   <CardContent className="pt-6">
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-5 h-5 text-secondary fill-current"
+                          className="w-5 h-5 text-yellow-400 fill-current"
                         />
                       ))}
                     </div>
@@ -681,20 +663,20 @@ const Home = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-primary text-primary-foreground">
+        <section className="py-20 avix-gradient-primary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold mb-6">
               Ready to Achieve Your Financial Goals?
             </h2>
-            <p className="text-xl mb-8 text-primary-foreground/90">
+            <p className="text-xl mb-8 text-white/90">
               Get started today with a consultation and personalized financial
               planning
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="lg" asChild>
+              <Button className="avix-button-secondary hover:avix-button-secondary" size="lg" asChild>
                 <Link to="/contact">Get Consultation</Link>
               </Button>
-              <Button variant="hero" size="lg" asChild>
+              <Button className="bg-white/20 hover:bg-white/30 text-white border-white/30" size="lg" asChild>
                 <Link to="/calculator">
                   <Calculator className="w-5 h-5 mr-2" />
                   Calculate EMI

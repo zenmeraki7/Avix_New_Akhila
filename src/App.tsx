@@ -14,7 +14,7 @@ import BusinessLoan from "./pages/MSMELoans";
 import Investment from "./pages/Investment";
 import MSMELoans from "./pages/MSMELoans";
 import Insurence from "./pages/Insurance";
-
+import WhatsAppIcon from "./components/WhatsAppIcon";
 
 const queryClient = new QueryClient();
 
@@ -30,14 +30,17 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
           <Route path="/loans" element={<Loans/>}/>
           <Route path="/BusinessLoan" element={<BusinessLoan/>}/>
           <Route path="/investment" element={<Investment/>}/>
           <Route path="/insurence" element={<Insurence/>}/>
           <Route path="/MSMELoans" element={<MSMELoans/>}/>
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
+        
+        {/* WhatsApp icon - appears on all pages */}
+        <WhatsAppIcon />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

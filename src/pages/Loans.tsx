@@ -85,9 +85,9 @@ const Loans: FC = () => {
         description:
           "Quick and hassle-free personal loans for all your immediate financial needs with minimal documentation.",
         rate: "From 10.5% APR",
-        amount: "₹50K - ₹25L",
+        amount: "₹50K - ₹2Cr",
         features: [
-          "Instant approval in 24 hours",
+          "Fastest Approval",
           "No collateral required",
           "Flexible repayment terms",
           "Minimal documentation",
@@ -100,7 +100,7 @@ const Loans: FC = () => {
         description:
           "Drive your dream car or bike today with our competitive vehicle financing options.",
         rate: "From 8.5% APR",
-        amount: "₹1L - ₹50L",
+  
         features: [
           "Up to 100% financing",
           "New & used vehicles",
@@ -130,7 +130,7 @@ const Loans: FC = () => {
         description:
           "Simplify your finances by consolidating multiple debts into one easy monthly payment.",
         rate: "From 11.0% APR",
-        amount: "₹2L - ₹15L",
+        amount: "₹2L - ₹1Cr",
         features: [
           "Combine multiple debts",
           "Single monthly payment",
