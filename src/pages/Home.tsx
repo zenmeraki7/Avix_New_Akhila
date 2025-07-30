@@ -73,8 +73,8 @@ const ModernServiceCard = memo(({ service, index }) => {
     >
       {/* Popular Badge */}
       {isPopular && (
-        <div className="absolute -top-3 left-6 bg-gradient-to-r from-accent to-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center z-10">
-          <Zap className="w-3 h-3 mr-1" />
+        <div className="absolute top-2 left-4 bg-gradient-to-r from-accent to-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center z-10 ">
+          <Zap className="w-3 h-3 mr-1 " />
           Most Popular
         </div>
       )}
@@ -358,10 +358,14 @@ const Home = () => {
         <Header />
 
         {/* Hero Section */}
+        {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${bg})` }}
+            className="absolute inset-0 bg-cover bg-no-repeat"
+            style={{
+              backgroundImage: `url(${bg})`,
+              backgroundPosition: "center 20%", // shifts image lower
+            }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
           </div>
@@ -467,6 +471,91 @@ const Home = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-4">
                 Our Trusted Partners
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                We collaborate with leading financial institutions to provide
+                you the best services
+              </p>
+            </div>
+
+            <Marquee
+              gradient={false}
+              speed={45}
+              pauseOnHover={true}
+              className="py-5"
+            >
+              <div className="flex gap-6">
+                {/* Partner logos with improved styling */}
+                {[
+                  { src: poonawalla, alt: "Poonawalla" },
+                  { src: smfg, alt: "SMFG" },
+                  { src: southIndian, alt: "South Indian Bank" },
+                  { src: shriram, alt: "Shriram" },
+                  { src: TATA, alt: "TATA" },
+                  { src: Birla, alt: "Birla" },
+                  { src: Axis, alt: "Axis" },
+                  { src: Axisfinance, alt: "Axis Finance" },
+                  { src: Bajaj, alt: "Bajaj" },
+                  { src: chola, alt: "Chola" },
+                  { src: finnable, alt: "Finnable" },
+                  { src: HDFC, alt: "HDFC" },
+                  { src: IDBI, alt: "IDBI" },
+                  { src: IDFC, alt: "IDFC" },
+                  { src: inCred, alt: "InCred" },
+                  { src: IndusInd, alt: "IndusInd" },
+                  { src: kotak, alt: "Kotak" },
+                  { src: LTFinance, alt: "L&T Finance" },
+                  { src: muthoot, alt: "Muthoot" },
+                  { src: piramal, alt: "Piramal" },
+                  { src: yesBank, alt: "Yes Bank" },
+                ]
+                  .concat([
+                    // Duplicate for seamless scroll
+                    { src: poonawalla, alt: "Poonawalla" },
+                    { src: smfg, alt: "SMFG" },
+                    { src: southIndian, alt: "South Indian Bank" },
+                    { src: shriram, alt: "Shriram" },
+                    { src: TATA, alt: "TATA" },
+                    { src: Birla, alt: "Birla" },
+                    { src: Axis, alt: "Axis" },
+                    { src: Axisfinance, alt: "Axis Finance" },
+                    { src: Bajaj, alt: "Bajaj" },
+                    { src: chola, alt: "Chola" },
+                    { src: finnable, alt: "Finnable" },
+                    { src: HDFC, alt: "HDFC" },
+                    { src: IDBI, alt: "IDBI" },
+                    { src: IDFC, alt: "IDFC" },
+                    { src: inCred, alt: "InCred" },
+                    { src: IndusInd, alt: "IndusInd" },
+                    { src: kotak, alt: "Kotak" },
+                    { src: LTFinance, alt: "L&T Finance" },
+                    { src: muthoot, alt: "Muthoot" },
+                    { src: piramal, alt: "Piramal" },
+                    { src: yesBank, alt: "Yes Bank" },
+                  ])
+                  .map((partner, index) => (
+                    <div
+                      key={index}
+                      className="w-36 h-24 flex items-center justify-center bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out p-4 mx-3"
+                    >
+                      <img
+                        src={partner.src}
+                        alt={partner.alt}
+                        className="h-12 object-contain"
+                      />
+                    </div>
+                  ))}
+              </div>
+            </Marquee>
+          </div>
+        </section>
+
+        {/* insurence partners */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-foreground mb-4">
+                Our Insurence Partners
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 We collaborate with leading financial institutions to provide

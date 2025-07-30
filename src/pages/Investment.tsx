@@ -142,7 +142,7 @@ const Investment: FC = () => {
 
   return (
     <div className="min-h-screen bg-background text-white relative overflow-hidden">
-      <Header/>
+      <Header />
       {/* Header */}
       <div className="relative overflow-hidden bg-gradient-primary text-primary-foreground py-20 text-center">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,7 +224,7 @@ const Investment: FC = () => {
         }
       `}</style>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };

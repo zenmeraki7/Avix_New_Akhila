@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Calculator, Phone } from 'lucide-react';
+import avixlogo from '../../assets/AvixLogo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,15 +20,14 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
+          {/* Logo */} 
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">A</span>
-            </div>
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              AVIX 
-            </span>
-          </Link>
+  <img src={avixlogo} alt="AVIX Logo" className="w-10 h-10" />
+  <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+    AVIX
+  </span>
+</Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ">

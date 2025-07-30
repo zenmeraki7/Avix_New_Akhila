@@ -260,64 +260,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Service Process */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              How It Works
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Simple 4-step process to get your financial solution
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "1",
-                title: "Apply",
-                description:
-                  "Submit your application online or visit our office",
-              },
-              {
-                step: "2",
-                title: "Verify",
-                description: "Our team verifies your documents and eligibility",
-              },
-              {
-                step: "3",
-                title: "Approve",
-                description: "Get quick approval based on your profile",
-              },
-              {
-                step: "4",
-                title: "Disburse",
-                description: "Receive funds directly to your account",
-              },
-            ].map((item, index) => (
-              <Card
-                key={index}
-                className="bg-gradient-card border-0 shadow-card text-center"
-              >
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary-foreground">
-                      {item.step}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Our Services */}
       <section className="py-20 bg-muted">
