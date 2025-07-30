@@ -10,10 +10,11 @@ import Calculator from "./pages/Calculator";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Loans from "./pages/Loans";
-import BusinessLoan from "./pages/BusinessLoan";
+import BusinessLoan from "./pages/MSMELoans";
 import Investment from "./pages/Investment";
-import Insurence from "./pages/Insurence";
 import MSMELoans from "./pages/MSMELoans";
+import Insurence from "./pages/Insurance";
+
 
 const queryClient = new QueryClient();
 
