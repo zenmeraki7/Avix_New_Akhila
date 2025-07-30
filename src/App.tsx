@@ -9,6 +9,10 @@ import Services from "./pages/Services";
 import Calculator from "./pages/Calculator";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Loans from "./pages/Loans";
+import BusinessLoan from "./pages/BusinessLoan";
+import Investment from "./pages/Investment";
+import Insurence from "./pages/Insurence";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +30,10 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/loans" element={<Loans/>}/>
+          <Route path="/BusinessLoan" element={<BusinessLoan/>}/>
+          <Route path="/investment" element={<Investment/>}/>
+          <Route path="/insurence" element={<Insurence/>}/>
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

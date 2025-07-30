@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, LucideIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ServiceCardProps {
   title: string;
@@ -8,9 +9,10 @@ interface ServiceCardProps {
   features: string[];
   icon: LucideIcon;
   className?: string;
+  link?: string; // 
 }
 
-const ServiceCard = ({ title, description, features, icon: Icon, className }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, features, icon: Icon, className, link }: ServiceCardProps) => {
   return (
     <Card className={`group hover:shadow-card transition-all duration-300 hover:-translate-y-1 bg-gradient-card border-0 ${className}`}>
       <CardHeader>
@@ -29,10 +31,24 @@ const ServiceCard = ({ title, description, features, icon: Icon, className }: Se
             </li>
           ))}
         </ul>
-        <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
-          View More
-          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-        </Button>
+        
+        {link ? (
+          <Button
+            asChild
+            variant="outline"
+            className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
+          >
+            <Link to={link}>
+              View More
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+            </Link>
+          </Button>
+        ) : (
+          <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+            View More
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+          </Button>
+        )}
       </CardContent>
     </Card>
   );

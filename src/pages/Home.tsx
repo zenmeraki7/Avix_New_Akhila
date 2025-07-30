@@ -28,7 +28,7 @@ import kotak from "../assets/kotak.jpeg";
 import LTFinance from "../assets/LTFinance.jpeg";
 import muthoot from "../assets/muthoot.jpeg";
 import piramal from "../assets/piramal.jpeg";
-import yesBank from '../assets/yesBank.jpeg';
+import yesBank from "../assets/yesBank.jpeg";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import {
@@ -61,6 +61,7 @@ const Home = () => {
         "Loan Takeover",
       ],
       icon: CreditCard,
+      link: "/loans",
     },
 
     {
@@ -68,12 +69,14 @@ const Home = () => {
       description: "Grow your wealth with our expert investment advisory",
       features: ["Mutual Funds", "SIP Planning", "Portfolio Management"],
       icon: TrendingUp,
+      link: "/BusinessLoan",
     },
     {
       title: "Insurance",
       description: "Comprehensive insurance coverage for peace of mind",
       features: ["Health Insurance", "Life Insurance", "Term Plans"],
       icon: Shield,
+      link: "/investment",
     },
     {
       title: "Credit Cards",
@@ -85,6 +88,7 @@ const Home = () => {
         "Financial Education & Tips",
       ],
       icon: HomeIcon,
+      link: "/insurence",
     },
   ];
 
@@ -183,8 +187,6 @@ const Home = () => {
           </div>
         </section>
 
-        
-
         {/* Services Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -233,7 +235,7 @@ const Home = () => {
                   ))}
                 </div>
                 <Button variant="accent" size="lg" className="mt-10" asChild>
-                  <Link to="/about">Learn More About Us</Link>
+                  <Link to="/">Learn More About Us</Link>
                 </Button>
               </div>
               <div className="relative flex justify-center">
@@ -384,7 +386,7 @@ const Home = () => {
                     className="h-12 object-contain"
                   />
                 </div>
-                 <div className="w-36 h-24 flex items-center justify-center bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out p-4">
+                <div className="w-36 h-24 flex items-center justify-center bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out p-4">
                   <img
                     src={yesBank}
                     alt="Piramal"
@@ -509,14 +511,13 @@ const Home = () => {
                     className="h-12 object-contain"
                   />
                 </div>
-                 <div className="w-36 h-24 flex items-center justify-center bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out p-4">
+                <div className="w-36 h-24 flex items-center justify-center bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out p-4">
                   <img
                     src={yesBank}
                     alt="Piramal"
                     className="h-12 object-contain"
                   />
                 </div>
-
               </div>
             </Marquee>
           </div>
