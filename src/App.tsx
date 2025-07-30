@@ -13,6 +13,7 @@ import Loans from "./pages/Loans";
 import BusinessLoan from "./pages/BusinessLoan";
 import Investment from "./pages/Investment";
 import Insurence from "./pages/Insurence";
+import MSMELoans from "./pages/MSMELoans";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/BusinessLoan" element={<BusinessLoan/>}/>
           <Route path="/investment" element={<Investment/>}/>
           <Route path="/insurence" element={<Insurence/>}/>
+          <Route path="/MSMELoans" element={<MSMELoans/>}/>
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

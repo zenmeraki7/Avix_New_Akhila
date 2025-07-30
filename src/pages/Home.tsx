@@ -51,46 +51,60 @@ import CountUp from "react-countup";
 
 const Home = () => {
   const services = [
+  {
+  title: "Quick Loans",
+  description:
+    "Apply online for fast, hassle‑free personal, business, car, and loan‑takeover financing. Enjoy competitive interest rates, flexible repayment tenures, and instant approval with minimal documentation to meet all your funding needs.",
+  features: [
+    "Instant personal loans with minimal paperwork",
+    "Business loans for working capital and growth",
+    "Car loans up to 100% financing at attractive rates",
+    "Seamless loan takeover for lower EMIs and better terms"
+  ],
+    icon: CreditCard,
+    link: "/loans",
+  },
     {
-      title: " Loans",
-      description: "Quick and hassle-free loans for all your needs",
-      features: [
-        "Personal Loans ,",
-        "Business Loans",
-        "Car Loans",
-        "Loan Takeover",
-      ],
-      icon: CreditCard,
-      link: "/loans",
-    },
-
-    {
-      title: "Investments",
-      description: "Grow your wealth with our expert investment advisory",
-      features: ["Mutual Funds", "SIP Planning", "Portfolio Management"],
-      icon: TrendingUp,
-      link: "/BusinessLoan",
-    },
-    {
-      title: "Insurance",
-      description: "Comprehensive insurance coverage for peace of mind",
-      features: ["Health Insurance", "Life Insurance", "Term Plans"],
-      icon: Shield,
-      link: "/investment",
-    },
-    {
-      title: "Credit Cards",
-      description:
-        "Discover, compare, and apply for the best credit cards tailored to your lifestyle and needs.",
-      features: [
-        "Top Credit Card Offers",
-        "Personalized Recommendations",
-        "Financial Education & Tips",
-      ],
-      icon: HomeIcon,
-      link: "/insurence",
-    },
-  ];
+  title: "Investment Advisory",
+  description:
+    "Discover and invest in top mutual funds, systematic investment plans (SIPs), and personalized portfolios with our expert investment advisory services. Maximize returns, balance risk, and unlock tax benefits today.",
+  features: [
+    "Access 2,000+ direct mutual fund schemes",
+    "Tailored SIP plans for disciplined wealth creation",
+    "Professional portfolio management & periodic rebalancing",
+    "Tax‑saving ELSS funds & retirement planning solutions"
+  ],
+    icon: TrendingUp,
+    link: "/Investment",
+  },
+  {
+    title: "Insurance",
+    description:
+      "Compare and buy the best insurance plans in India—health, life, motor, home and travel— with comprehensive coverage, cashless claims, and expert advisory to protect you and your loved ones.",
+    features: [
+      "Comprehensive health insurance with cashless hospitalization network",
+      "Life insurance policies offering tax benefits under Section 80C",
+      "Motor insurance for cars and bikes with zero‑depreciation cover",
+      "Travel insurance for domestic & international trips with COVID‑19 protection",
+    ],
+    icon: Shield,
+    link: "/Insurance",
+  },
+  {
+    title: "MSME Loans",
+    description:
+      "Compare and apply online for the best MSME business loans in India. Get competitive interest rates, flexible repayment tenures, and fast approvals with minimal documentation to fuel your business growth.",
+    features: [
+      "Lowest interest rates on MSME loans",
+      "Flexible repayment schedules up to 7 years",
+      "Quick online approval with minimal paperwork",
+      "Customized working capital and term loan options",
+      "Dedicated support for small and medium enterprises",
+    ],
+    icon: HomeIcon,
+    link: "/MSMELoans",
+  },
+];
 
   const stats = [
     { number: 10000, suffix: "+", label: "Happy Customers" },
@@ -108,7 +122,7 @@ const Home = () => {
       rating: 5,
     },
     {
-      name: "Navya Venkatesh",
+      name: "Aiswarya S R",
       role: "Software Engineer",
       content:
         "Got my home loan approved in just 3 days! Amazing service and competitive rates.",
