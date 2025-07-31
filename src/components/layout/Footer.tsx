@@ -1,21 +1,30 @@
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Link } from "react-router-dom";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
+import avixlogo from "../../assets/AvixLogo.png";
 
 const Footer = () => {
   const services = [
-    'Personal Loans',
-    'Business Loans',
-    'Credit Cards',
-    'Loan Against Property',
-    'Health Insurance',
-    'Life Insurance',
+    { name: "Personal Loans", path: "/loans" },
+    { name: "Business Loans", path: "/MSMELoans" },
+    { name: "Credit Cards", path: "/loans" },
+    { name: "Loan Against Property", path: "/loans" },
+    { name: "Health Insurance", path: "/insurence" },
+    { name: "Life Insurance", path: "/insurence" },
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'EMI Calculator', href: '/calculator' },
-    { name: 'Contact', href: '/contact' },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "EMI Calculator", href: "/calculator" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -26,13 +35,14 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold text-lg">A</span>
+                <img src={avixlogo} alt="AVIX Logo" className="w-10 h-10" />
               </div>
               <span className="text-2xl font-bold">AVIX </span>
             </div>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Your trusted partner for all financial solutions. We provide comprehensive 
-              financial services including loans, insurance, investments, and tax advisory.
+              Your trusted partner for all financial solutions. We provide
+              comprehensive financial services including loans, insurance,
+              investments, and tax advisory.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
@@ -41,11 +51,14 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>avixfinancialsolutions@gmail.com</span>
+                <span>official@avixfinancialsolutions.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>5th floor, Chowalloor Tower, West Fort, Civil Lanes Road, Thrissur - 680004</span>
+                <span>
+                  5th floor, Chowalloor Tower, West Fort, Civil Lanes Road,
+                  Thrissur - 680004
+                </span>
               </div>
             </div>
           </div>
@@ -55,12 +68,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm">
               {services.map((service) => (
-                <li key={service}>
-                  <Link 
-                    to="/services" 
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
                     className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
                   >
-                    {service}
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -73,7 +86,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     to={link.href}
                     className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
                   >
@@ -82,21 +95,33 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            
+
             {/* Social Media */}
             <div className="mt-6">
               <h4 className="text-sm font-semibold mb-3">Follow Us</h4>
               <div className="flex space-x-3">
-                <a href="#" className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
+                >
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
+                >
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
+                >
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
+                >
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>
@@ -105,7 +130,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; 2025 AVIX Financial Solutions. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>
+            &copy; 2025 AVIX Financial Solutions. All rights reserved. | Privacy
+            Policy | Terms of Service
+          </p>
         </div>
       </div>
     </footer>

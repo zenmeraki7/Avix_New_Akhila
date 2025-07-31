@@ -1,4 +1,5 @@
 import React, { FC, memo, useMemo } from "react";
+import { Link } from "react-router-dom";
 import {
   CreditCard,
   Car,
@@ -67,10 +68,12 @@ const ServiceCard: FC<ServiceCardProps> = memo(({ service, index }) => (
         Amount:{" "}
         <span className="font-semibold text-foreground">{service.amount}</span>
       </div>
-      <button className="flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 group">
-        Apply Now
-        <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" />
-      </button>
+      <Link to="/Contact">
+        <button className="flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 group">
+          Apply Now
+          <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" />
+        </button>
+      </Link>
     </div>
   </div>
 ));
@@ -100,7 +103,7 @@ const Loans: FC = () => {
         description:
           "Drive your dream car or bike today with our competitive vehicle financing options.",
         rate: "From 8.5% APR",
-  
+
         features: [
           "Up to 100% financing",
           "New & used vehicles",

@@ -20,7 +20,13 @@ import {
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 // AVIX Brand Colors
@@ -192,10 +198,16 @@ const InsuranceServiceCard: FC<InsuranceServiceCardProps> = memo(
                 {service.pricing}
               </span>
             </div>
-            <Button variant="outline" size="sm" className="avix-accent border-current hover:bg-current hover:text-white">
-              Get Quote
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <Link to="/contact">
+              <Button
+                variant="outline"
+                size="sm"
+                className="avix-accent border-current hover:bg-current hover:text-white"
+              >
+                Contact Us
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </div>
         </CardContent>
       </Card>
@@ -206,7 +218,7 @@ InsuranceServiceCard.displayName = "InsuranceServiceCard";
 
 const FeatureHighlight: FC<FeatureHighlightProps> = memo(
   ({ feature, index }) => (
-    <Card 
+    <Card
       className="avix-gradient-card border-0 animate-fade-in"
       style={{ animationDelay: `${index * 200}ms` }}
     >
@@ -231,10 +243,11 @@ const Insurance: FC = () => {
         id: "health-insurance",
         title: "Health Insurance Advisory",
         icon: Heart,
-        description: "Comprehensive health coverage for you and your family with expert guidance on the best policies.",
+        description:
+          "Comprehensive health coverage for you and your family with expert guidance on the best policies.",
         coverage: "Up to ₹1 Cr",
         serviceType: "Advisory Fee",
-        pricing: "Free Consultation",
+        pricing: "Get Consultation",
         premium: true,
         features: [
           "Pre-existing disease coverage",
@@ -248,7 +261,8 @@ const Insurance: FC = () => {
         id: "life-insurance",
         title: "Life Insurance Planning",
         icon: Shield,
-        description: "Secure your family's financial future with comprehensive life insurance solutions.",
+        description:
+          "Secure your family's financial future with comprehensive life insurance solutions.",
         coverage: "Up to ₹5 Cr",
         serviceType: "Premium",
         pricing: "₹500/month",
@@ -306,7 +320,7 @@ const Insurance: FC = () => {
     "Cashless claim processing support",
     "50+ insurance company partnerships",
     "End-to-end policy management",
-    "Tax-saving insurance solutions"
+    "Tax-saving insurance solutions",
   ];
 
   return (
@@ -322,17 +336,18 @@ const Insurance: FC = () => {
               <Shield className="w-4 h-4 mr-2 text-yellow-300" />
               Comprehensive Insurance Solutions
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Insurance <span className="text-yellow-300">Services</span>
             </h1>
-            
+
             <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white/90 mb-8">
-              Protect what matters most with expert guidance and comprehensive coverage solutions.
+              Protect what matters most with expert guidance and comprehensive
+              coverage solutions.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-6 text-white/80">
-              {["IRDA Certified", "50+ Insurers", "Free Consultation"].map(
+              {["IRDA Certified", "50+ Insurers", "Get Consultation"].map(
                 (item, i) => (
                   <div key={i} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-300 mr-2" />
@@ -349,7 +364,7 @@ const Insurance: FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, i) => (
-                <Card 
+                <Card
                   key={i}
                   className="text-center avix-gradient-card border-0 animate-fade-in"
                   style={{ animationDelay: `${i * 200}ms` }}
@@ -374,13 +389,16 @@ const Insurance: FC = () => {
                 <div className="w-16 h-16 avix-icon-bg rounded-full flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h2 className="text-4xl font-bold text-foreground">Why Choose Our Insurance Services?</h2>
+                <h2 className="text-4xl font-bold text-foreground">
+                  Why Choose Our Insurance Services?
+                </h2>
               </div>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Experience the difference with our professional advisory and comprehensive support.
+                Experience the difference with our professional advisory and
+                comprehensive support.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {keyFeatures.map((feat, i) => (
                 <FeatureHighlight key={i} feature={feat} index={i} />
@@ -397,10 +415,13 @@ const Insurance: FC = () => {
                 <div className="w-16 h-16 avix-icon-bg rounded-full flex items-center justify-center">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
-                <h2 className="text-4xl font-bold text-foreground">Our Insurance Solutions</h2>
+                <h2 className="text-4xl font-bold text-foreground">
+                  Our Insurance Solutions
+                </h2>
               </div>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Tailored coverage solutions for every personal and business need.
+                Tailored coverage solutions for every personal and business
+                need.
               </p>
             </div>
 
@@ -432,7 +453,9 @@ const Insurance: FC = () => {
 
               <Card className="avix-gradient-primary text-white border-0 avix-shadow-hero">
                 <CardHeader>
-                  <CardTitle className="text-3xl">Ready to Get Protected?</CardTitle>
+                  <CardTitle className="text-3xl">
+                    Ready to Get Protected?
+                  </CardTitle>
                   <CardDescription className="text-white/80 text-lg">
                     Get expert insurance advice and comprehensive coverage
                   </CardDescription>
@@ -441,18 +464,30 @@ const Insurance: FC = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <Phone className="w-6 h-6" />
-                      <span className="text-lg font-medium">+91 99468 41656</span>
+                      <span className="text-lg font-medium">
+                        +91 99468 41656
+                      </span>
                     </div>
                     <div className="flex items-center gap-4">
                       <span className="w-6 h-6 text-center text-lg">📧</span>
-                      <span className="text-lg">avixfinancialsolutions@gmail.com</span>
+                      <span className="text-lg">
+                        avixfinancialsolutions@gmail.com
+                      </span>
                     </div>
                   </div>
                   <div className="pt-4 space-y-3">
-                    <Button className="w-full avix-button-secondary hover:avix-button-secondary" size="lg" asChild>
-                      <Link to="/contact">Get Free Consultation</Link>
+                    <Button
+                      className="w-full avix-button-secondary hover:avix-button-secondary"
+                      size="lg"
+                      asChild
+                    >
+                      <Link to="/contact">Get  Consultation</Link>
                     </Button>
-                    <Button className="w-full bg-white/20 hover:bg-white/30 text-white border-white/30" size="lg" asChild>
+                    <Button
+                      className="w-full bg-white/20 hover:bg-white/30 text-white border-white/30"
+                      size="lg"
+                      asChild
+                    >
                       <Link to="/contact">
                         <Calculator className="w-5 h-5 mr-2" />
                         Get Insurance Quote
@@ -472,16 +507,25 @@ const Insurance: FC = () => {
               Get Protected Today
             </h2>
             <p className="text-xl text-white/90 mb-10">
-              Don't wait to secure your future. Get the perfect insurance coverage now with expert guidance.
+              Don't wait to secure your future. Get the perfect insurance
+              coverage now with expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="avix-button-secondary hover:avix-button-secondary" size="lg" asChild>
+              <Button
+                className="avix-button-secondary hover:avix-button-secondary"
+                size="lg"
+                asChild
+              >
                 <Link to="/contact">
                   <Phone className="w-5 h-5 mr-2" />
                   Call Expert Now
                 </Link>
               </Button>
-              <Button className="bg-white/20 hover:bg-white/30 text-white border-white/30" size="lg" asChild>
+              <Button
+                className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                size="lg"
+                asChild
+              >
                 <Link to="/contact">
                   <Calculator className="w-5 h-5 mr-2" />
                   Get Free Quote
