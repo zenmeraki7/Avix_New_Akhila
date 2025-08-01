@@ -1,0 +1,175 @@
+.journeySection {
+  padding: 6rem 0;
+  background: white;
+}
+
+.journeyContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.journeyHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.journeyTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.journeySubtitle {
+  font-size: 1.25rem;
+  color: rgb(75, 85, 99);
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.timelineContainer {
+  position: relative;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 0.25rem;
+  border-radius: 9999px;
+  transform: translateX(-50%);
+}
+
+.timelineList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+}
+
+.timelineItemReverse {
+  display: flex;
+  align-items: center;
+}
+
+.milestoneContent {
+  flex: 1;
+}
+
+.milestoneContentRight {
+  flex: 1;
+  padding-right: 3rem;
+  text-align: right;
+}
+
+.milestoneContentLeft {
+  flex: 1;
+  padding-left: 3rem;
+  text-align: left;
+}
+
+.milestoneCard {
+  border: none;
+  transition: all 500ms;
+  transform: none;
+}
+
+.milestoneCard:hover {
+  transform: translateY(-0.5rem);
+}
+
+.milestoneCardContent {
+  padding: 2rem;
+}
+
+.milestoneTop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.milestoneIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milestoneYear {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.milestoneEvent {
+  color: rgb(55, 65, 81);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.timelineCircle {
+  position: relative;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  margin-left: 1rem;
+}
+
+.timelineCircleHidden {
+  flex: 1;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .journeyContainer {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .timelineLine {
+    left: 50%;
+    transform: translateX(-0.125rem);
+  }
+  
+  .timelineItem {
+    flex-direction: row;
+  }
+  
+  .timelineItemReverse {
+    flex-direction: row-reverse;
+  }
+  
+  .milestoneContentRight {
+    text-align: right;
+  }
+  
+  .milestoneContentLeft {
+    text-align: left;
+  }
+  
+  .timelineCircle {
+    margin-left: 0;
+  }
+  
+  .timelineCircleHidden {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .journeyContainer {
+    padding: 0 2rem;
+  }
+}

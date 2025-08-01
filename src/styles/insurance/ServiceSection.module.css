@@ -1,0 +1,204 @@
+.serviceSection {
+  padding: 5rem 0;
+}
+
+.serviceContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.serviceHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.serviceHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.serviceSubtitle {
+  font-size: 1.25rem;
+  color: rgb(107, 114, 128);
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  transition: all 500ms;
+  transform: none;
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.serviceCard:hover {
+  transform: translateY(-0.75rem);
+}
+
+.serviceCardPremium {
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.5);
+}
+
+.premiumBadge {
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.serviceCardHeader {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.serviceCardHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.serviceCardIcon {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 300ms;
+}
+
+.serviceCard:hover .serviceCardIcon {
+  transform: scale(1.1);
+}
+
+.urgentBadge {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgb(239, 68, 68);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverageBadge {
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.serviceCardTitle {
+  font-size: 1.5rem;
+  transition: color 300ms;
+}
+
+.serviceCard:hover .serviceCardTitle {
+  color: rgb(147, 51, 234);
+}
+
+.serviceCardDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.serviceFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.serviceFeature {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.serviceFeature span {
+  margin-left: 0.75rem;
+}
+
+.serviceFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(229, 231, 235);
+}
+
+.servicePricing {
+  font-size: 0.875rem;
+  color: rgb(107, 114, 128);
+}
+
+.servicePricing span {
+  font-weight: 600;
+  color: rgb(17, 24, 39);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .serviceContainer {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .serviceContainer {
+    padding: 0 2rem;
+  }
+}

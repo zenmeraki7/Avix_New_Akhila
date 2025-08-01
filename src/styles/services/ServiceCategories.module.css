@@ -1,0 +1,162 @@
+.categoriesSection {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.categoriesContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.categoriesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.categorySection {
+  margin-bottom: 4rem;
+}
+
+.categoryHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.categoryTitleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.categoryIcon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms;
+}
+
+.categoryTitle {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.categoryDescription {
+  font-size: 1.25rem;
+  color: rgb(75, 85, 99);
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.serviceCard {
+  border: none;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.serviceContent {
+  padding: 2rem;
+}
+
+.serviceTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 300ms;
+}
+
+.serviceDetails {
+  flex: 1;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.serviceName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(31, 41, 55);
+}
+
+.serviceRate {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.serviceRateText {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.serviceDescription {
+  color: rgb(75, 85, 99);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.serviceHighlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.serviceHighlight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.serviceHighlight span {
+  color: rgb(55, 65, 81);
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .categoriesContainer {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .categoriesContainer {
+    padding: 0 2rem;
+  }
+}

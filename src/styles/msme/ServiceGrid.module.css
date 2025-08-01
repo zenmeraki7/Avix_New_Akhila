@@ -1,0 +1,220 @@
+.servicesSection {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.categorySection {
+  margin-bottom: 4rem;
+}
+
+.categoryHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.categoryTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.categoryDescription {
+  color: rgb(107, 114, 128);
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.serviceCard {
+  position: relative;
+  background: rgb(255, 255, 255);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgb(243, 244, 246);
+  transition: all 500ms;
+  transform: none;
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.5rem);
+}
+
+.serviceCardPopular {
+  border: 1px solid rgb(191, 219, 254);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.5rem;
+  background: linear-gradient(to right, rgb(37, 99, 235), rgb(30, 64, 175));
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.serviceIcon {
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background: linear-gradient(to bottom right, rgb(59, 130, 246), rgb(29, 78, 216));
+  transition: transform 300ms;
+}
+
+.serviceCard:hover .serviceIcon {
+  transform: scale(1.1);
+}
+
+.serviceIconPopular {
+  background: linear-gradient(to bottom right, rgb(37, 99, 235), rgb(30, 64, 175));
+}
+
+.serviceCard:hover .serviceIconPopular {
+  background: linear-gradient(to bottom right, rgb(29, 78, 216), rgb(30, 58, 138));
+}
+
+.serviceRate {
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  color: rgb(30, 64, 175);
+  background: rgb(219, 234, 254);
+}
+
+.serviceTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  transition: color 300ms;
+}
+
+.serviceCard:hover .serviceTitle {
+  color: rgb(59, 130, 246);
+}
+
+.serviceDescription {
+  color: rgb(107, 114, 128);
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.serviceFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceFeature {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.serviceFeature span {
+  margin-left: 0.5rem;
+}
+
+.serviceFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(243, 244, 246);
+}
+
+.serviceAmount {
+  font-size: 0.75rem;
+  color: rgb(107, 114, 128);
+}
+
+.serviceAmount span {
+  font-weight: 600;
+  color: rgb(17, 24, 39);
+}
+
+.serviceButton {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: rgb(59, 130, 246);
+  transition: color 200ms;
+}
+
+.serviceButton:hover {
+  color: rgb(30, 64, 175);
+}
+
+.serviceButtonIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.25rem;
+  transform: none;
+  transition: transform 200ms;
+}
+
+.serviceButton:hover .serviceButtonIcon {
+  transform: translateX(0.25rem);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .servicesSection {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicesSection {
+    padding: 4rem 2rem;
+  }
+  
+  .serviceGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .serviceGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

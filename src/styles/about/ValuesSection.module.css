@@ -1,0 +1,98 @@
+.valuesSection {
+  padding: 6rem 0;
+}
+
+.valuesContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.valuesHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.valuesTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.valuesSubtitle {
+  font-size: 1.25rem;
+  color: rgb(75, 85, 99);
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.valueCard {
+  border: none;
+  text-align: center;
+  transition: all 500ms;
+  transform: none;
+}
+
+.valueCard:hover {
+  transform: translateY(-0.75rem);
+}
+
+.valueContent {
+  padding: 2rem;
+}
+
+.valueIcon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem auto;
+  background: linear-gradient(to bottom right, rgb(243, 244, 246), rgb(229, 231, 235));
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 300ms;
+}
+
+.valueCard:hover .valueIcon {
+  transform: scale(1.1);
+}
+
+.valueTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(31, 41, 55);
+  margin-bottom: 1rem;
+}
+
+.valueDescription {
+  color: rgb(75, 85, 99);
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .valuesContainer {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .valuesContainer {
+    padding: 0 2rem;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

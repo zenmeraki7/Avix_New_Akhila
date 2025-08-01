@@ -1,0 +1,225 @@
+/* AVIX Brand Colors and Utilities */
+.avix-gradient-primary {
+  background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+}
+
+.avix-gradient-card {
+  background: linear-gradient(145deg, rgba(28, 0, 77, 0.02) 0%, rgba(58, 0, 135, 0.04) 50%, rgba(138, 28, 157, 0.02) 100%);
+  border: 1px solid rgba(138, 28, 157, 0.1);
+}
+
+.avix-accent {
+  color: #8A1C9D;
+}
+
+.avix-icon-bg {
+  background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+}
+
+.avix-shadow-card {
+  box-shadow: 0 4px 20px rgba(138, 28, 157, 0.08);
+}
+
+.avix-shadow-hero {
+  box-shadow: 0 8px 32px rgba(138, 28, 157, 0.25);
+}
+
+.avix-button-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1C004D;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.avix-button-secondary:hover {
+  background: rgba(255, 255, 255, 1);
+  color: white !important;
+}
+
+
+.avix-premium-badge {
+  background: linear-gradient(135deg, #8A1C9D 0%, #3A0087 100%);
+  color: white;
+}
+
+.avix-popular-badge {
+  background: linear-gradient(135deg, #8A1C9D 0%, #FF6B35 100%);
+  color: white;
+}
+
+/* Enhanced AVIX Styles for All Pages */
+.avix-gradient-secondary {
+  background: linear-gradient(145deg, rgba(28, 0, 77, 0.05) 0%, rgba(58, 0, 135, 0.08) 50%, rgba(138, 28, 157, 0.05) 100%);
+}
+
+.avix-gradient-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  border: 1px solid rgba(138, 28, 157, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.avix-text-gradient {
+  background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.avix-shadow-elegant {
+  box-shadow: 0 10px 40px rgba(138, 28, 157, 0.15);
+}
+
+.avix-shadow-soft {
+  box-shadow: 0 4px 20px rgba(138, 28, 157, 0.08);
+}
+
+.avix-shadow-card {
+  box-shadow: 0 4px 20px rgba(138, 28, 157, 0.08);
+}
+
+.avix-shadow-hero {
+  box-shadow: 0 8px 32px rgba(138, 28, 157, 0.25);
+}
+
+.avix-glow {
+  box-shadow: 0 0 30px rgba(138, 28, 157, 0.3);
+}
+
+.avix-hero-bg {
+  background: linear-gradient(135deg, #1C004D 0%, #3A0087 30%, #8A1C9D 70%, #B83FBD 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.avix-hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+}
+
+.avix-text-shadow {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.avix-button-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1C004D;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.avix-button-secondary:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #1C004D;
+}
+
+.avix-premium-badge {
+  background: linear-gradient(135deg, #8A1C9D 0%, #3A0087 100%);
+  color: white;
+}
+
+.avix-accent-bg {
+  background: rgba(138, 28, 157, 0.1);
+  color: #8A1C9D;
+}
+
+.avix-success-bg {
+  background: rgba(34, 197, 94, 0.1);
+  color: rgb(34, 197, 94);
+}
+
+.avix-animate-float {
+  animation: avix-float 6s ease-in-out infinite;
+}
+
+.avix-animate-pulse-soft {
+  animation: avix-pulse-soft 3s ease-in-out infinite;
+}
+
+.avix-animate-slide-up {
+  animation: avix-slide-up 0.8s ease-out forwards;
+}
+
+.highlight-badge {
+  background: linear-gradient(135deg, rgba(138, 28, 157, 0.1) 0%, rgba(138, 28, 157, 0.05) 100%);
+  border: 1px solid rgba(138, 28, 157, 0.2);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes avix-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes avix-pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes avix-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.service-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.category-section {
+  margin-bottom: 4rem;
+}

@@ -1,0 +1,173 @@
+.serviceSection {
+  padding: 5rem 0;
+}
+
+.serviceContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.serviceHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.serviceHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.serviceSubtitle {
+  font-size: 1.25rem;
+  color: rgb(107, 114, 128);
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.investmentCard {
+  transition: all 300ms;
+  transform: none;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.investmentCard:hover {
+  transform: translateY(-0.5rem);
+}
+
+.cardHeader {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.cardHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cardIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.returnsBadge {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.feature span {
+  margin-left: 0.75rem;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(229, 231, 235);
+}
+
+.minInvestment {
+  font-size: 0.875rem;
+  color: rgb(107, 114, 128);
+}
+
+.minInvestment span {
+  font-weight: 600;
+  color: rgb(17, 24, 39);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .serviceContainer {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .serviceContainer {
+    padding: 0 2rem;
+  }
+}

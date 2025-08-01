@@ -1,0 +1,112 @@
+.featureSection {
+  padding: 5rem 0;
+  background: rgb(249, 250, 251);
+}
+
+.featureContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.featureHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.featureHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.featureIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.featureSubtitle {
+  font-size: 1.25rem;
+  color: rgb(107, 114, 128);
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.featureCard {
+  border: none;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.featureCardContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.featureCardIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.featureCardTitle {
+  font-weight: 600;
+}
+
+.featureCardDescription {
+  font-size: 0.875rem;
+  color: rgb(107, 114, 128);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 640px) {
+  .featureContainer {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .featureContainer {
+    padding: 0 2rem;
+  }
+  
+  .featureGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
