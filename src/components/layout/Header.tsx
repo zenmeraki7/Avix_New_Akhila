@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Calculator, Phone, Zap, ArrowRight, CreditCard, TrendingUp, Home, ChevronRight } from "lucide-react";
-import avixlogo from "../../assets/AvixLogo.png";
+import avixlogo from "../../public/assets/AvixLogo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
