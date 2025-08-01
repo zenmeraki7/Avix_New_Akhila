@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Phone, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import styles from "@/styles/insurance/CTASection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/insurance/CTASection.module.css";
+import "../../styles/avix.css";
 
 const CTASection = () => {
   return (

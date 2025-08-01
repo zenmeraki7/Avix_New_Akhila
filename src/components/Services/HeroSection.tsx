@@ -10,8 +10,8 @@ import {
   Star
 } from "lucide-react";
 import { useMemo } from "react";
-import styles from "@/styles/services/HeroSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/services/HeroSection.module.css";
+import "../../styles/avix.css";
 
 const HeroSection = () => {
   const quickStats = useMemo(

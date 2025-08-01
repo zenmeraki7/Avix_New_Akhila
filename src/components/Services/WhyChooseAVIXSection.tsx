@@ -19,8 +19,8 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useMemo } from "react";
-import styles from "@/styles/services/WhyChooseAVIXSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/services/WhyChooseAVIXSection.module.css";
+import "../../styles/avix.css";
 
 const WhyChooseAVIXSection = () => {
   const benefits = useMemo(

@@ -9,8 +9,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { InvestmentService, InvestmentCardProps } from "@/types/investment";
-import styles from "@/styles/investment/ServiceSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/investment/ServiceSection.module.css";
+import "../../styles/avix.css";
 
 const InvestmentCard: FC<InvestmentCardProps> = memo(({ service, index }) => (
   <Card

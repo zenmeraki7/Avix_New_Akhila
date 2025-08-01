@@ -19,8 +19,8 @@ import {
   Clock,
 } from "lucide-react";
 import { memo, useMemo } from "react";
-import styles from "@/styles/home/ServicesSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/home/ServicesSection.module.css";
+import "../../styles/avix.css";
 
 // Memoized Modern Service Card Component with AVIX Theme
 const ModernServiceCard = memo(

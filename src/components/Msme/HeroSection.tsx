@@ -7,8 +7,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Stat } from "@/types/msme";
-import styles from "@/styles/msme/HeroSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/msme/HeroSection.module.css";
+import "../../styles/avix.css";
 
 const HeroSection = () => {
   const stats: Stat[] = useMemo(

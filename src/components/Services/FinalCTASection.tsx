@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Star, ArrowRight } from "lucide-react";
-import styles from "@/styles/services/FinalCTASection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/services/FinalCTASection.module.css";
+import "../../styles/avix.css";
 
 const FinalCTASection = () => {
   return (

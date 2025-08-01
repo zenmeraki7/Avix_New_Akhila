@@ -4,8 +4,8 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Star } from "lucide-react";
-import styles from "@/styles/home/TestimonialsSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/home/TestimonialsSection.module.css";
+import "../../styles/avix.css";
 
 const TestimonialsSection = () => {
   const testimonials = useMemo(

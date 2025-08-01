@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { CheckCircle, Phone, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import styles from "@/styles/investment/WhyInvestSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/investment/WhyInvestSection.module.css";
+import "../../styles/avix.css";
 
 const WhyInvestSection = () => {
   const benefits = useMemo(

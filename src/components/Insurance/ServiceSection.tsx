@@ -17,8 +17,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Service, InsuranceServiceCardProps } from "@/types/insurance";
-import styles from "@/styles/insurance/ServiceSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/insurance/ServiceSection.module.css";
+import "../../styles/avix.css";
 
 const InsuranceServiceCard: FC<InsuranceServiceCardProps> = memo(
   ({ service, index }) => {

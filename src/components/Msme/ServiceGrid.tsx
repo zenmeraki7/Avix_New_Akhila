@@ -14,7 +14,7 @@ import {
   MSMEServiceCardProps,
   CategorySectionProps,
 } from "@/types/msme";
-import styles from "@/styles/msme/ServiceGrid.module.css";
+import styles from "../../styles/msme/ServiceGrid.module.css";
 import { Link } from "react-router-dom";
 
 const MSMEServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => {

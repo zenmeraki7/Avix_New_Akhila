@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Users, Target } from "lucide-react";
-import styles from "@/styles/msme/CTASection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/msme/CTASection.module.css";
+import "../../styles/avix.css";
 
 const CTASection = () => {
   return (

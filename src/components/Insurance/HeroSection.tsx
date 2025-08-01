@@ -1,6 +1,6 @@
 import { Shield, CheckCircle } from "lucide-react";
-import styles from "@/styles/insurance/HeroSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/insurance/HeroSection.module.css";
+import "../../styles/avix.css";
 
 const HeroSection = () => {
   const features = ["IRDA Certified", "50+ Insurers", "Get Consultation"];

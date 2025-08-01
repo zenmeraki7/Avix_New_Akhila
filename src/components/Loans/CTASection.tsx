@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import styles from "@/styles/loans/CTASection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/loans/CTASection.module.css";
+import "../../styles/avix.css";
 
 const CTASection = () => {
   return (

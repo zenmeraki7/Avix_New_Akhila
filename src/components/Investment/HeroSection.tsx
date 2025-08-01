@@ -2,8 +2,8 @@ import { FC, memo, useMemo } from "react";
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Stat, StatCardProps } from "@/types/investment";
-import styles from "@/styles/investment/HeroSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/investment/HeroSection.module.css";
+import "../../styles/avix.css";
 
 const StatCard: FC<StatCardProps> = memo(({ stat, index }) => (
   <Card 

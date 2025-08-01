@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Calculator, Download, Share2 } from 'lucide-react';
-import styles from '@/styles/services/emi-calculator/EMICalculator.module.css';
-import '@/styles/avix.css';
+import styles from '../../../styles/services/emi-calculator/EMICalculator.module.css';
+import '../../../styles/avix.css';
 import { Link } from 'react-router-dom';
 
 const EMICalculator = () => {

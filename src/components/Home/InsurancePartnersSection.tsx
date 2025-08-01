@@ -1,14 +1,14 @@
 import Marquee from "react-fast-marquee";
-import aditya from "@/assets/aditya.webp";
-import aig from "@/assets/aig.webp";
-import icici from "@/assets/icici.webp";
-import lombard from "@/assets/lombard.webp";
-import niva from "@/assets/niva.webp";
-import care from "@/assets/care.webp";
-import cigna from "@/assets/cigna.webp";
-import ergo from "@/assets/ergo.webp";
-import star from "@/assets/star.webp";
-import styles from "@/styles/home/PartnersSection.module.css";
+import aditya from "../../public/assets/adityaBirla.webp";
+import aig from "../../public/assets/aig.webp";
+import icici from "../../public/assets/icici.webp";
+import lombard from "../../public/assets/lombard.webp";
+import niva from "../../public/assets/niva.webp";
+import care from "../../public/assets/care.webp";
+import cigna from "../../public/assets/cigna.webp";
+import ergo from "../../public/assets/ergo.webp";
+import star from "../../public/assets/star.webp";
+import styles from "../../styles/home/PartnersSection.module.css";
 
 const InsurancePartnersSection = () => {
   const insurancePartners = [

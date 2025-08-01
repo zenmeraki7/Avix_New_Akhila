@@ -1,6 +1,6 @@
 import { CheckCircle } from "lucide-react";
-import styles from "@/styles/loans/HeroSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/loans/HeroSection.module.css";
+import "../../styles/avix.css";
 
 const HeroSection = () => {
   const features = [

@@ -9,8 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import styles from "@/styles/insurance/WhyChooseSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/insurance/WhyChooseSection.module.css";
+import "../../styles/avix.css";
 
 const WhyChooseSection = () => {
   const benefits = useMemo(

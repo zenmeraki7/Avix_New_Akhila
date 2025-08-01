@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import familyImage from "../../public/assets/family.png";
-import styles from "@/styles/home/WhyChooseUsSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/home/WhyChooseUsSection.module.css";
+import "../../styles/avix.css";
 
 const WhyChooseUsSection = () => {
   const features = [

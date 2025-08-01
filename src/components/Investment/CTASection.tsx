@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import styles from "@/styles/investment/CTASection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/investment/CTASection.module.css";
+import "../../styles/avix.css";
 
 const CTASection = () => {
   return (

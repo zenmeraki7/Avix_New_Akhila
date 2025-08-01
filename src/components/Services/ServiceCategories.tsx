@@ -17,8 +17,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { useMemo } from "react";
-import styles from "@/styles/services/ServiceCategories.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/services/ServiceCategories.module.css";
+import "../../styles/avix.css";
 
 const ServiceCategories = () => {
   const serviceCategories = useMemo(

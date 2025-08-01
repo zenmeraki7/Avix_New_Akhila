@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import CountUp from "react-countup";
-import styles from "@/styles/home/StatsSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../styles/home/StatsSection.module.css";
+import "../../styles/avix.css";
 
 const StatsSection = () => {
   const stats = useMemo(
