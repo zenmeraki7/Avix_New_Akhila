@@ -3,7 +3,7 @@ import './WhatsAppIcon.css'; // We'll create this CSS file
 
 const WhatsAppIcon = ({ 
   phoneNumber = "919946841656", // Your company's WhatsApp number
-  message = "Hi! I'm interested in your lending services. Can you help me?",
+  message = "Hi! I'm interested in your lending services. Can you assist me?",
   size = 60 
 }) => {
   const handleWhatsAppClick = () => {
