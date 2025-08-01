@@ -20,7 +20,7 @@ import LTFinance from "../../public/assets/LTFinance.jpeg";
 import muthoot from "../../public/assets/muthoot.jpeg";
 import piramal from "../../public/assets/piramal.jpeg";
 import yesBank from "../../public/assets/yesBank.jpeg";
-import styles from "/styles/home/PartnersSection.module.css";
+import styles from "../../styles/home/PartnersSection.module.css";
 
 const TrustedPartnersSection = () => {
   const partners = [
