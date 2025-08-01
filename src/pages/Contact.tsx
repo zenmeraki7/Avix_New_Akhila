@@ -141,7 +141,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 99468 41656"],
+      details: ["+91 99468 41656, 8943661219"],
       description: "Available Mon-Sat, 9 AM - 7 PM",
       color: "text-blue-500",
       bgColor: "bg-blue-50"
@@ -398,14 +398,14 @@ const Contact = () => {
                 <Card className="avix-gradient-card border-0 avix-shadow-elegant overflow-hidden">
                   <CardContent className="p-0">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.695582756733!2d76.21031567570314!3d10.523976660075893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ee15ed42d1c5%3A0x4bc7dbae8d9c6f51!2sChowallur%20Towers%2C%20West%20Fort%2C%20Thrissur%2C%20Kerala%20680004!5e0!3m2!1sen!2sin!4v1722854951234!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.695582756733!2d76.20080556!3d10.52252778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDMxJzIxLjEiTiA3NsKwMTInMDIuOSJF!5e0!3m2!1sen!2sin!4v1722854951234!5m2!1sen!2sin"
                       width="100%"
                       height="300"
                       style={{ border: 0 }}
                       allowFullScreen={true}
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="AVIX Financial Solutions - Chowallur Towers"
+                      title="AVIX Financial Solutions - Office Location"
                       className="rounded-xl"
                     ></iframe>
                   </CardContent>
@@ -482,7 +482,7 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-12">
               <div className="flex items-center gap-4 text-2xl font-bold bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-4">
                 <Phone className="w-8 h-8 text-yellow-300" />
-                <span>+91 99468 41656</span>
+                <span>+91 99468 41656 , +91 8943661219</span>
               </div>
               <div className="hidden sm:block text-white/60 text-2xl">|</div>
               <div className="flex items-center gap-4 text-2xl font-bold bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-4">

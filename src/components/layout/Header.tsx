@@ -136,12 +136,12 @@ const Header = () => {
                     <CreditCard className="w-5 h-5 text-white/90" />
                     <span>💰 Business Loans from</span>
                     <span className="font-bold text-yellow-300">9.99%*</span>
-                    <span>| Instant Digital Processing</span>
+                    <span>| Fully Digital Processing</span>
                   </span>
                   
                   <span className="flex items-center space-x-2">
                     <TrendingUp className="w-5 h-5 text-white/90" />
-                    <span>🏠 Home Loans with Zero Processing Fee</span>
+                    <span>🏠 Home Loans with low Processing Fee</span>
                     <span>| Up to ₹5 Crore</span>
                   </span>
                   
@@ -214,7 +214,7 @@ const Header = () => {
                   {/* Original Logo */}
                   <img 
                     src={avixlogo} 
-                    alt="AVIX Financial Services Logo" 
+                    alt="AVIX Financial Solutions Logo" 
                     className="w-full h-full object-contain" 
                   />
                 </div>
@@ -224,7 +224,7 @@ const Header = () => {
                   AVIX
                 </span>
                 <span className="text-xs text-muted-foreground -mt-1 hidden sm:block">
-                  Financial Services
+                  Financial Solutions
                 </span>
               </div>
             </Link>
