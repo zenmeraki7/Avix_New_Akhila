@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import aditya from "../../public/assets/adityaBirla.webp";
+import aditya from "../../public/assets/aditya.webp";
 import aig from "../../public/assets/aig.webp";
 import icici from "../../public/assets/icici.webp";
 import lombard from "../../public/assets/lombard.webp";
