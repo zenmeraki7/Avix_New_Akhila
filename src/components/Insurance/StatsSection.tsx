@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Stat } from "@/types/insurance";
 import styles from "../../styles/insurance/StatsSection.module.css";
-import "./../styles/avix.css";
+import "../../styles/avix.css";
 
 const StatsSection = () => {
   const stats: Stat[] = useMemo(
