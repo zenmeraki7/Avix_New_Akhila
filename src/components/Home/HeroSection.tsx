@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator } from "lucide-react";
-import bg from "../../public/assets/bg.png";
+import bg from "../../public/assets/bg.webp";
 import styles from "../../styles/home/HeroSection.module.css";
 import "../../styles/avix.css";
 

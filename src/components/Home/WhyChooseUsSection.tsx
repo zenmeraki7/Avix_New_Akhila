@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
-import familyImage from "../../public/assets/family.png";
+import familyImage from "../../public/assets/family.webp";
 import styles from "../../styles/home/WhyChooseUsSection.module.css";
 import "../../styles/avix.css";
 
