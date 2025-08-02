@@ -3,43 +3,190 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AVIX Financial Services - Your Trusted Financial Partner</title>
+    
+    <!-- DNS prefetch for CDNs -->
+    <link rel="dns-prefetch" href="//avixfinancialsolutions.com" />
+    
+    <title>AVIX Financial Services – Your Trusted Financial Partner</title>
     <meta
       name="description"
       content="Comprehensive financial solutions including personal loans, business loans, home loans, insurance, mutual funds, and investment advisory. Quick approvals, competitive rates."
     />
     <meta name="author" content="AVIX Financial Services" />
-
-    <meta
-      property="og:title"
-      content="AVIX Financial Services - Your Trusted Financial Partner"
-    />
-    <meta
-      property="og:description"
-      content="Comprehensive financial solutions including personal loans, business loans, home loans, insurance, mutual funds, and investment advisory. Quick approvals, competitive rates."
-    />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://avixfinancialsolutions.com/" />
+    
+    <!-- Social Sharing -->
+    <meta property="og:image" content="https://avixfinancialsolutions.com/assets/avix.webp" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
-
+    <meta property="og:title" content="AVIX Financial Services – Your Trusted Financial Partner" />
+    <meta property="og:description" content="Where Financial Clarity Begins - Quick approvals on personal, home, and business loans – plus insurance, mutual funds & advisory." />
+    <meta property="og:url" content="https://avixfinancialsolutions.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta
-      name="twitter:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
-    <!-- font -->
-    <link
-      href="https://fonts.cdnfonts.com/css/times-new-roman"
-      rel="stylesheet"
-    />
-    <link rel="preload" as="image" href="/assets/bg.webp" />
+    <meta name="twitter:site" content="@AvixFinServ" />
+    <meta name="twitter:image" content="https://avixfinancialsolutions.com/assets/avix.webp" />
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#1a365d" />
+    
+    <!-- Favicon (add multiple sizes) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- FONT LOADING: Self-hosted for maximum performance -->
+    <!-- No external font CDN needed - we're self-hosting -->
+    
+    <!-- CRITICAL CSS INLINE - Extended -->
+    <style>
+      /* Custom font declarations for brand consistency */
+      @font-face {
+        font-family: 'Libre Baskerville';
+        src: url('/assets/fonts/libre-baskerville-regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap; /* Ensures text is always visible */
+      }
+      
+      @font-face {
+        font-family: 'Libre Baskerville';
+        src: url('/assets/fonts/libre-baskerville-bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      /* CSS Reset + Critical Styles */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      
+      html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        /* System font stack for maximum performance - zero loading time */
+        font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+        background-color: #ffffff;
+        color: #1a202c;
+      }
+      
+      #root {
+        min-height: 100vh;
+        background: #fff;
+      }
+      
+      /* Loading state to prevent CLS */
+      .loading-skeleton {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      
+      @keyframes loading {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+      
+      /* Critical above-the-fold styles */
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('/assets/bg.avif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      
+      /* Fallback for older browsers */
+      .hero-section.no-avif {
+        background-image: url('/assets/bg.webp');
+      }
+      
+      .hero-section.no-webp {
+        background-image: url('/assets/bg.jpg');
+      }
+    </style>
+    
+    <!-- RESOURCE HINTS -->
+    <!-- Preload critical images with multiple formats -->
+    <link rel="preload" as="image" href="/assets/bg.avif" type="image/avif" />
+    <link rel="preload" as="image" href="/assets/bg.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/assets/bg.jpg" type="image/jpeg" />
+    
+    <!-- Preload fonts - Update paths based on your choice -->
+    <!-- For Libre Baskerville: -->
+    <link rel="preload" href="/assets/fonts/libre-baskerville-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/libre-baskerville-bold.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- For system fonts, remove all font preloads to save bandwidth -->
+    
+    <!-- Module preload for development (Vite will handle this automatically) -->
+    <!-- <link rel="modulepreload" href="/dist/assets/index.js" /> -->
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .catch(err => console.log('SW registration failed'));
+        });
+      }
+    </script>
+    
+    <!-- Performance monitoring -->
+    <script>
+      // Critical Web Vitals monitoring
+      function sendToAnalytics(metric) {
+        // Send to your analytics service
+        console.log('Web Vital:', metric);
+      }
+      
+      // LCP monitoring
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.startTime < 2500) {
+            sendToAnalytics({
+              name: 'LCP',
+              value: entry.startTime,
+              rating: entry.startTime < 2500 ? 'good' : 'poor'
+            });
+          }
+        }
+      }).observe({entryTypes: ['largest-contentful-paint']});
+      
+      // FID monitoring
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          sendToAnalytics({
+            name: 'FID',
+            value: entry.processingStart - entry.startTime,
+            rating: (entry.processingStart - entry.startTime) < 100 ? 'good' : 'poor'
+          });
+        }
+      }).observe({entryTypes: ['first-input']});
+    </script>
   </head>
-
   <body>
-    <div id="root"></div>
+    <!-- Loading skeleton while React loads -->
+    <div id="root">
+      <div class="loading-skeleton" style="height: 100vh; width: 100%;" aria-label="Loading..."></div>
+    </div>
+    
+    <!-- Vite will inject the correct script tags automatically in development -->
+    <!-- In production, these will be replaced with the built assets -->
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Critical path CSS for non-JS users -->
+    <noscript>
+      <link rel="stylesheet" href="/dist/assets/index.css" />
+    </noscript>
   </body>
 </html>
