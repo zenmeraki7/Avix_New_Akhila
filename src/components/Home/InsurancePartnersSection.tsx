@@ -4,7 +4,7 @@ import aig from "../../public/assets/aig.webp";
 import icici from "../../public/assets/icici.webp";
 import lombard from "../../public/assets/lombard.webp";
 import niva from "../../public/assets/niva.webp";
-import care from "../../public/assets/care.webp";
+import care from "../../public/assets/care2.webp";
 import cigna from "../../public/assets/cigna.webp";
 import ergo from "../../public/assets/ergo.webp";
 import star from "../../public/assets/star.webp";
