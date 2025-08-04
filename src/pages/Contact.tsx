@@ -244,7 +244,7 @@ const Contact = () => {
             <p className="text-xl md:text-2xl mb-12 text-white/90 leading-relaxed max-w-4xl mx-auto">
               Ready to start your financial journey? Get personalized advice and solutions 
               tailored to your unique needs from our certified financial advisors.
-              ADITHI😒😒😒😒😒😒😒😒😒
+             
             </p>
 
             {/* Quick Stats */}
