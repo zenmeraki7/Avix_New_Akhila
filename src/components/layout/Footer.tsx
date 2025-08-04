@@ -8,7 +8,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
-import avixlogo from "../../public/assets/AvixLogo.png";
+import avixlogo from "../../public/assets/AvixLogo.webp";
 
 const Footer = () => {
   const services = [

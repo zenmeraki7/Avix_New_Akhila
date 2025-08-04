@@ -1,8 +1,8 @@
 import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -21,8 +21,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
+      <Toaster /> {/* Custom toast component only */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,16 +29,14 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/loans" element={<Loans/>}/>
-          <Route path="/BusinessLoan" element={<BusinessLoan/>}/>
-          <Route path="/investment" element={<Investment/>}/>
-          <Route path="/Insurance" element={<Insurence/>}/>
-          <Route path="/MSMELoans" element={<MSMELoans/>}/>
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/loans" element={<Loans />} />
+          <Route path="/BusinessLoan" element={<BusinessLoan />} />
+          <Route path="/investment" element={<Investment />} />
+          <Route path="/Insurance" element={<Insurence />} />
+          <Route path="/MSMELoans" element={<MSMELoans />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        
-        {/* WhatsApp icon - appears on all pages */}
+
         <WhatsAppIcon />
       </BrowserRouter>
     </TooltipProvider>
