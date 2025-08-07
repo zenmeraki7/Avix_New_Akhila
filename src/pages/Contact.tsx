@@ -114,8 +114,11 @@ const avixStyles = `
   }
 `;
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeozrdyg"; // Replace this with your actual Formspree endpoint
+
 const Contact = () => {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -123,15 +126,43 @@ const Contact = () => {
     service: '',
     message: ''
   });
+console.log(formData)
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    toast({
-      title: "Form Submitted Successfully! 🎉",
-      description: "Our team will contact you within 24 hours.",
+  try {
+    setIsLoading(true);
+    const response = await fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
     });
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-  };
+
+    if (response.ok) {
+      toast({
+        title: "Form Submitted Successfully! 🎉",
+        description: "Our team will contact you within 24 hours.",
+      });
+      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+    } else {
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact us directly.",
+      });
+    }
+  } catch (error) {
+    toast({
+      title: "An error occurred",
+      description: "Please check your connection and try again.",
+    });
+    console.error("Formspree Error:", error);
+  }finally{
+    setIsLoading(false);
+  }
+};
 
   const handleChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -319,6 +350,7 @@ const Contact = () => {
                         <Input
                           id="email"
                           type="email"
+                          required
                           placeholder="Enter your email address (optional)"
                           value={formData.email}
                           onChange={(e) => handleChange('email', e.target.value)}
@@ -328,7 +360,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <Label htmlFor="service" className="text-gray-700 font-medium">Service Interested In</Label>
-                        <Select value={formData.service} onValueChange={(value) => handleChange('service', value)}>
+                        <Select required value={formData.service} onValueChange={(value) => handleChange('service', value)}>
                           <SelectTrigger className="avix-form-focus border-2 p-3 text-lg">
                             <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
@@ -356,6 +388,7 @@ const Contact = () => {
                         type="submit" 
                         className="w-full avix-gradient-primary hover:avix-primary-hover text-white border-0 p-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 avix-shadow-elegant" 
                         size="lg"
+                        disabled={isLoading || !formData.name || !formData.phone || !formData.service || formData.service === ''}
                       >
                         <Send className="w-5 h-5 mr-2" />
                         Submit & Get Free Consultation
